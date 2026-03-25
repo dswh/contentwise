@@ -1,0 +1,975 @@
+High Signal AI (Break it down. Build it back.)
+
+MIssion Statement: Every week, we reverse engineer a breakout AI product, demo, or launch, rebuild the core experience, and extract the lessons builders can actually use.
+
+We break down the most interesting AI products on the internet and rebuild the ideas that make them work.
+
+This is a strong idea.
+Not because “people like AI,” but because you’re combining three things that almost always work together:
+A proven hook: something already validated by Product Hunt, GitHub, Show HN, X, or a demo community.
+A challenge arc: “can we rebuild this ourselves?”
+A hidden lesson: people come for the product, but they stay for the reverse engineering and the build decisions.
+That is much stronger than “here’s a Claude Code tutorial.” Tutorials are usually searched only when the user already has intent. Your format creates intent first.
+The right mental model is:
+Do not teach AI tools directly. Teach through missions.
+That is the gap most “AI education” creators miss.
+Where you are right
+You already understand the most important thing: the tool is not the content; the mission is the content.
+That is exactly the right instinct.
+People rarely share:
+“I learned how to use Claude Code today.”
+They do share:
+“This person rebuilt a viral product in 47 minutes.”
+“They reverse engineered a top Product Hunt launch.”
+“They tried to recreate an insane AI demo from X.”
+“They tested whether the hype was real.”
+That framing gives you:
+curiosity,
+stakes,
+narrative,
+comparison,
+and a natural payoff.
+What you are not thinking about enough
+1. You are not starting a newsletter. You are building a content engine
+Your real asset is not the newsletter issue or the video. It is the repeatable machine:
+find hook → score hook → reverse engineer → rebuild → compare → extract lesson
+That machine should produce:
+newsletter,
+YouTube video,
+shorts/clips,
+repo/template,
+community discussion,
+future episode ideas.
+If you think “newsletter first” too narrowly, you may accidentally write issues that are interesting to read but hard to convert into video. Design from day one for cross-format reuse.
+2. You need a sharper promise
+Right now the concept is interesting, but the audience-facing promise is still fuzzy.
+You need a sentence like:
+We reverse engineer viral AI products and rebuild them with coding agents.
+We test whether trending AI launches are actually reproducible.
+We break down hot AI demos, rebuild the core idea fast, and show what’s real versus hype.
+That promise is better than “AI newsletter” because it gives a repeatable expectation.
+3. The biggest risk is becoming derivative
+If the format becomes:
+“Here’s a cool thing someone made”
+“Now here’s us making it”
+…then it can feel like a clone channel very fast.
+Your moat is not cloning. Your moat is diagnosis.
+Every issue/video should answer:
+Why did this hook people?
+What is the true core insight?
+Which 20% created 80% of the wow factor?
+What would a lean recreation look like?
+What did the original likely optimize for that others missed?
+Where is the hype fake and where is the product actually good?
+That makes you analyst + builder, not copier.
+4. You need a selection rubric or the format will decay
+Not every trending thing is a good episode.
+Some hooks are high-view but low-teachability.
+You need a scoring system.
+The hook selection framework
+For every candidate, score it on five axes from 1–5:
+A. Hook strength
+Would a smart person instantly care?
+Examples:
+“This topped Product Hunt today”
+“This GitHub repo exploded”
+“This AI demo got massive attention on X”
+“This Show HN made builders obsess”
+B. Rebuildability
+Can you recreate the core experience in 1–2 days or less?
+If not, it may be good inspiration but bad content.
+C. Teachability
+Does rebuilding it naturally teach something useful?
+Examples:
+agents,
+tool use,
+UX for AI,
+prompts,
+orchestration,
+evaluation,
+APIs,
+latency tradeoffs,
+memory,
+retrieval,
+workflow design.
+D. Reveal potential
+Will the audience get at least one surprising reveal?
+Examples:
+“This looked complex but was mostly prompt routing.”
+“The magic was actually in the UX, not the model.”
+“The viral part is easier than expected.”
+“The hard part was not coding, but reliability.”
+E. Ethical/originality safety
+Can you adapt the idea without being a copycat or harming the original creator?
+Best episodes usually rebuild:
+the core mechanic,
+not the exact brand/product.
+A strong candidate is usually:
+high hook + medium/high rebuildability + high teachability + high reveal potential
+The best places to monitor
+You were right to think of Product Hunt, X, and GitHub. Add a few more layers so your sourcing is not trapped inside one ecosystem.
+Tier 1: primary hook sources
+These are the best raw-material feeds for your format.
+Product Hunt: best for packaged launches, clear positioning, and strong “today’s winner” framing. Product Hunt has a live launches feed, a launch guide, and a leaderboard/archive of past loved launches. (Product Hunt)
+GitHub Trending: best for tools, infra, developer products, and open-source apps that are getting real momentum. GitHub also has trending developers. (GitHub)
+Show HN: especially good because it is explicitly for things people can try, which fits your “let’s rebuild the core” format extremely well. (Hacker News)
+Hugging Face Trending Papers / Spaces / Models: great for AI-native hooks, especially demos that can be turned into applied products or interfaces. Spaces is effectively an AI app directory, and Hugging Face also surfaces trending papers and models. (Hugging Face)
+Replicate Explore / Collections: useful for spotting demo-worthy model capabilities before they become mainstream products. (Replicate)
+Tier 2: builder-community signal sources
+These are good for finding ideas before they become mainstream.
+Indie Hackers Products: useful for seeing what builders are launching and how they frame value. (Indie Hackers)
+Lobsters: more technical and often higher signal for serious developer-interest links. (Lobsters)
+Reddit communities like r/SideProject and r/opensource: good for catching early builders, rough demos, and reactions from actual users. (Reddit)
+Glama MCP servers: especially relevant if your angle includes coding agents, MCP, and agent tooling. It now surfaces popular servers sortable by usage over the last 30 days. (Glama – MCP Hosting Platform)
+Tier 3: format-adjacent opportunity sources
+These are less about “products” and more about where new behavior is emerging.
+Vercel AI templates: useful when a pattern is becoming standardized fast and you want to show how much of a product is unique versus templated. (Vercel)
+Chrome Web Store editors’ picks / categories: good for lightweight, highly demo-able utility products. (Chrome Web Store)
+App Store charts: useful when an AI behavior crosses into mass-market consumer adoption. (App Store)
+My recommendation: don’t monitor everything manually. Create a 3-layer system:
+daily scan,
+weekly shortlist,
+one winning build per issue/video.
+Your real editorial angle
+You should not position this as “clone this startup.”
+You should position it as one of these:
+Option 1: reverse-engineer and rebuild
+“Here’s what made this work. Here’s our lean recreation.”
+Best for education.
+Option 2: hype test
+“This went viral. Is it actually hard, or is the magic mostly presentation?”
+Best for strong CTR.
+Option 3: speedrun build lab
+“We gave ourselves 60/90/120 minutes to recreate the core experience.”
+Best for YouTube retention.
+Option 4: constraint challenge
+“Only using Claude Code + X tools + Y budget.”
+Best for gamification.
+Option 5: improvement challenge
+“We rebuilt the core, but with one better twist.”
+Best for originality.
+That fifth one is important. It prevents you from feeling like a copier.
+The format that can actually win
+For newsletter first, I would not do long essays.
+I would do a tight, cinematic issue format.
+Newsletter issue structure
+The hook
+“This hit #1 on Product Hunt.”
+“This repo blew up on GitHub.”
+“This AI demo went viral on X.”
+Why people cared
+one paragraph on the emotional/functional reason it spread.
+The teardown
+what the product appears to do,
+what it probably does under the hood,
+what’s difficult,
+what’s easier than it looks.
+The build brief
+“Here’s what we’re trying to recreate.”
+clear constraints:
+time,
+stack,
+tools,
+features,
+budget.
+The build
+key decisions,
+failures,
+pivots,
+screenshots or short GIFs.
+The verdict
+how close did we get,
+what the original did better,
+what we learned.
+The transfer
+3 lessons readers can use in their own AI products.
+That last section is where the real educational value lives.
+The YouTube version should not be a tutorial
+This is crucial.
+Your YouTube video should feel like:
+a mission,
+an experiment,
+a race,
+a teardown,
+a bet.
+Not a lesson.
+The lesson is smuggled inside the mission.
+That’s what makes this more viral than direct education.
+How to make it “MrBeast-like” without becoming shallow
+What MrBeast-style really means in your world is not loudness.
+It means:
+1. Clear objective
+The viewer must understand the mission in seconds.
+“Can we rebuild this viral AI product by the end of today?”
+2. Visible stakes
+Not money stakes. Narrative stakes.
+Examples:
+time limit,
+feature checklist,
+accuracy bar,
+one-shot demo deadline,
+“must impress a real user,”
+“must survive blind comparison.”
+3. Constant progress
+The viewer should feel movement every 20–40 seconds:
+new clue,
+failed attempt,
+better prototype,
+surprising insight,
+benchmark,
+reveal.
+4. Escalation
+The episode must get harder:
+from imitation → debugging → performance → UX polish → final comparison.
+5. Payoff
+The audience needs a satisfying ending:
+comparison with original,
+blind test,
+real-world use,
+creator reaction,
+public launch.
+That is how you retain without giveaways or artificial drama.
+The psychology you should design for
+Curiosity gap
+The viewer wants to know:
+how it works,
+whether it is actually hard,
+whether you can pull it off,
+what the secret is.
+Competence fantasy
+A lot of viewers want to feel:
+“Maybe I could build cool things too.”
+Your content should make them feel empowered, not excluded.
+Progress dopamine
+People stay when they can see measurable improvement.
+Use:
+scoreboards,
+checkpoints,
+version comparisons,
+“before vs after.”
+Open loops
+Start questions early and close them late:
+“The weirdest part wasn’t the model.”
+“We discovered the real moat halfway through.”
+“The viral feature turned out not to matter.”
+Identity reinforcement
+Your audience likely wants to see themselves as:
+smart,
+early,
+builder-minded,
+not just passive consumers of AI hype.
+Your tone should reward that identity.
+Tension + relief
+You need cycles:
+problem,
+partial solve,
+new obstacle,
+breakthrough.
+That rhythm keeps people watching.
+Social proof
+External validation matters.
+That’s why hooks from Product Hunt, GitHub Trending, Show HN, etc. are so useful.
+They let you borrow interest from already-validated attention. (Product Hunt)
+What makes this content viral-worthy
+Usually some combination of these:
+familiar object + surprising build
+“We rebuilt X”
+public proof
+“This ranked #1”
+speed
+“in 60 minutes”
+constraint
+“using only Claude Code”
+comparison
+“ours vs the original”
+truth reveal
+“the hype was misleading”
+audience projection
+“you could do this too”
+The most shareable angle is not “look what we built.”
+It is:
+“Look what we learned by trying to build this.”
+The biggest strategic mistake to avoid
+Do not over-index on whatever is merely trending.
+Trend alone is not enough.
+Your ideal content object is:
+already interesting + structurally teachable + visually demonstrable + realistically rebuildable
+A boring but trending repo will underperform a visually satisfying AI demo with a cleaner story.
+The best positioning sentence for the brand
+Here are some viable versions:
+We reverse engineer viral AI products and rebuild them faster than you think.
+Every week, we break down a trending AI launch and rebuild the core idea with coding agents.
+We test whether the internet’s hottest AI products are real innovation or just smart packaging.
+Build along as we deconstruct trending AI products and recreate them from scratch.
+My favorite is this one:
+We reverse engineer trending AI products, rebuild the core experience, and show what actually makes them work.
+It is broad enough for newsletter and YouTube.
+Your moat
+Your moat is not speed alone.
+It is not “I know Claude Code.”
+It is not “I cover AI.”
+Your moat is this combination:
+strong hook sourcing,
+product intuition,
+reverse-engineering ability,
+teaching clarity,
+narrative design,
+repeatable execution.
+That is hard to copy.
+Especially if each episode ends with a better abstraction:
+a framework,
+a repo,
+a template,
+a reusable pattern,
+a decision tree.
+Then every piece of content compounds.
+A very practical launch plan
+Phase 1: newsletter proof of concept
+Start with 8–10 issues.
+Do not wait for perfection.
+Each week:
+shortlist 5 hooks,
+choose 1 winner,
+publish 1 teardown + rebuild.
+Goal:
+learn which type wins:
+product launches,
+viral demos,
+GitHub repos,
+Show HN tools,
+AI research demos.
+Phase 2: identify the strongest repeatable formats
+Track:
+open rate,
+click rate,
+read depth,
+replies,
+shares,
+which hook categories convert best.
+Phase 3: turn winners into YouTube
+Only adapt the strongest issues.
+Do not port every newsletter 1:1.
+Phase 4: build a community loop
+Ask audience to submit:
+products to dissect,
+repos to rebuild,
+demos to test,
+blind comparisons.
+Now the audience feeds the engine.
+The exact content buckets I’d use
+You need recurring pillars.
+Pillar 1: Viral rebuild
+A hot launch or demo, rebuilt.
+Pillar 2: Hype audit
+A trending AI product tested for real depth.
+Pillar 3: Feature extraction
+Take one killer feature from a breakout product and show how to recreate only that.
+Pillar 4: Better version
+Rebuild the idea, but fix one weakness.
+Pillar 5: Open-source equivalent
+Take a polished commercial idea and build a lean open version.
+That gives you freshness without losing brand consistency.
+How YouTube should use retention data
+YouTube’s own guidance is useful here:
+the intro metric looks at how many viewers are still watching after the first 30 seconds,
+spikes often mean rewatch/share-worthy moments,
+dips mean abandonment or skipping,
+and title/thumbnail should match what the opening actually delivers. (Google Help)
+For Shorts, YouTube also explicitly advises thinking about how the first 1–2 seconds grab scrollers, and for longer videos it stresses that titles and thumbnails should accurately reflect the content. (YouTube)
+So for your format:
+first 5–15 seconds: state mission + show original product + show your attempt preview,
+mid-video: create spike-worthy reveals,
+every video: audit where viewers dipped and rewrite that section format.
+YouTube’s creator guidance also emphasizes engineering story for retention, with a hook, a clear conflict, a build toward climax, and a reliable cadence. (blog.youtube)
+That maps perfectly to your format.
+One sharp editorial principle
+Every issue/video should answer these 4 questions:
+Why did this spread?
+How does it probably work?
+Can we rebuild the core?
+What should builders learn from this?
+If a candidate does not create strong answers for all four, skip it.
+My honest view on the opportunity
+This can absolutely work.
+But only if you resist becoming:
+generic AI news,
+generic build-in-public,
+generic tutorials,
+generic “I cloned X.”
+The winning version is:
+high-signal hook + strong reverse engineering + visible build challenge + creator-grade storytelling + useful takeaway
+That is rare.
+You are essentially inventing:
+MythBusters for AI products, with builder education hidden inside the entertainment.
+That is a real format.
+
+1) Hook scoring mechanism
+Use this before committing to any newsletter issue or video.
+Score each candidate from 1 to 5 on each dimension.
+A. Attention strength
+Question: Will a smart internet-native person care instantly?
+Score guide:
+1 = obscure, no existing signal
+2 = mildly interesting niche launch
+3 = decent momentum in one community
+4 = clearly trending in a visible place
+5 = breakout object with obvious curiosity
+Examples of high scorers:
+#1 Product Hunt launch
+GitHub repo exploding in stars
+viral X demo
+Show HN thread with heavy engagement
+B. Rebuildability
+Question: Can we recreate the core experience fast enough for content?
+Score guide:
+1 = too complex, too infra-heavy
+2 = possible but not practical for your format
+3 = hard but can replicate a stripped-down version
+4 = feasible with clear scoping
+5 = ideal for a fast reverse-engineer/build challenge
+C. Teachability
+Question: Will rebuilding this naturally teach something valuable?
+Score guide:
+1 = cool, but little transferable learning
+2 = mostly spectacle
+3 = one good lesson
+4 = several reusable lessons
+5 = deeply instructive while still entertaining
+D. Visual payoff
+Question: Will the audience see obvious progress and a satisfying end result?
+Score guide:
+1 = mostly backend or invisible logic
+2 = difficult to show on screen
+3 = somewhat demo-able
+4 = visibly satisfying
+5 = highly screen-friendly and thumbnail-friendly
+E. Reveal potential
+Question: Is there likely to be a surprising insight?
+Examples:
+“The wow factor was mostly UX.”
+“The hard part wasn’t the AI.”
+“This looked magical but was mostly orchestration.”
+“The original moat is not where people think.”
+Score guide:
+1 = no real insight beyond “we built it”
+3 = one decent reveal
+5 = multiple non-obvious takeaways
+F. Originality safety
+Question: Can you cover this without feeling like a lazy clone?
+Score guide:
+1 = feels derivative / uncomfortable
+2 = hard to differentiate
+3 = possible with careful framing
+4 = clearly transformative
+5 = easy to make original by focusing on mechanism, lessons, or improvement
+G. Audience fit
+Question: Does this fit your audience’s identity?
+Your likely audience:
+builders
+AI-curious professionals
+aspiring technical creators
+founders / operators / developers
+Score guide:
+1 = interesting, but wrong audience
+3 = somewhat relevant
+5 = perfect overlap
+H. Format elasticity
+Question: Can this become multiple content assets?
+Can it become:
+newsletter issue
+long-form video
+short clip
+tweet thread / LinkedIn post
+repo / template
+community challenge
+Score guide:
+1 = one-off
+3 = two formats
+5 = content flywheel material
+Final hook score
+Use this weighted formula:
+Hook Score =
+Attention strength × 2
+Rebuildability × 2
+Teachability × 2
+Visual payoff × 1.5
+Reveal potential × 1.5
+Originality safety × 1
+Audience fit × 1.5
+Format elasticity × 1
+Max score = 62.5
+Decision rule
+50+ = must cover
+42–49 = strong candidate
+34–41 = cover only if timing is right
+below 34 = reject
+Fast filter version
+Before full scoring, ask 3 yes/no questions:
+Would someone click this in under 3 seconds?
+Can we rebuild the core in 1–2 focused sessions?
+Will the audience learn something reusable?
+If the answer is not “yes” to all three, skip.
+
+2) Content pillars
+You need recurring pillars so the channel feels like a show, not random experiments.
+Pillar 1: Viral Rebuild
+Format: A trending launch/demo/repo becomes a rebuild challenge.
+Core question:
+Can we recreate the core experience ourselves?
+Works best for:
+Product Hunt launches
+GitHub repos
+X demos
+Show HN products
+Why this matters:
+This is your flagship format. It creates the strongest hook + story + payoff.
+Example titles:
+We Rebuilt Today’s #1 Product Hunt Launch
+This AI Demo Went Viral. We Tried to Recreate It
+We Reverse Engineered a Trending GitHub AI Tool
+Pillar 2: Hype Audit
+Format: Take a hyped product and test what’s real versus packaging.
+Core question:
+Is this actually impressive, or just smart presentation?
+Why this matters:
+This builds trust and gives you an opinion moat.
+Example titles:
+Is This Viral AI Product Actually Hard to Build?
+We Tested the Hype Behind This Trending AI Tool
+Pillar 3: Feature Extraction
+Format: Don’t rebuild the whole product. Rebuild only the killer feature.
+Core question:
+What is the smallest piece that made this product spread?
+Why this matters:
+This is often more educational and more repeatable than full rebuilds.
+Example titles:
+We Rebuilt the One Feature That Made This App Blow Up
+The Real Magic of This AI Product Was Just One Workflow
+Pillar 4: Better Than the Original
+Format: Rebuild the core idea, then improve one important thing.
+Core question:
+What would we change if we built this ourselves?
+Why this matters:
+This prevents “clone content” and makes you feel like a creative builder.
+Example titles:
+We Rebuilt This Viral AI Tool — But Made It Better
+This Product Was Brilliant, But We Fixed Its Biggest Flaw
+Pillar 5: Build Under Constraint
+Format: Add a rule to make it a game.
+Constraint ideas:
+only Claude Code
+only open-source tools
+90-minute limit
+under $20
+no frontend libraries
+one-shot prompt only
+can’t manually code certain parts
+Why this matters:
+Constraint creates tension, retention, and identity.
+Example titles:
+We Had 90 Minutes to Rebuild This AI Product
+Could Claude Code Recreate This Viral Tool in One Session?
+Pillar 6: Open-Source Equivalent
+Format: Take a polished commercial idea and build the lean open version.
+Core question:
+What’s the simplest useful version anyone can build?
+Why this matters:
+This is practical, empowering, and community-friendly.
+Example titles:
+We Built an Open Version of This Popular AI Product
+Here’s the Lean Version of a Viral AI Startup
+Pillar 7: Lessons From the Build
+Format: Meta-analysis from multiple rebuilds.
+Core question:
+What patterns keep showing up in winning AI products?
+Why this matters:
+This turns one-off content into long-term authority.
+Example topics:
+What 10 Viral AI Products Had in Common
+The UX Patterns Behind the Best AI Demos
+What Rebuilding 12 AI Products Taught Us
+Recommended pillar mix
+For your first 12 pieces:
+5 Viral Rebuilds
+2 Hype Audits
+2 Feature Extractions
+2 Better Than the Original
+1 Lessons From the Build
+That mix keeps the format fresh while preserving a clear identity.
+
+3) Virality scoring mechanism
+This is different from hook scoring.
+A hook can be good for building. A piece can still fail as content.
+Virality scoring tells you whether the story packaging is strong enough.
+Score each from 1 to 5.
+A. Instant curiosity
+Would the title alone trigger:
+“Wait, what?”
+Examples:
+We Rebuilt Today’s #1 Product Hunt Launch
+This AI Demo Went Viral. So We Tried to Clone the Core Idea
+Could Claude Code Recreate This in 90 Minutes?
+B. Stakes
+Is there a clear consequence or tension?
+Examples of stakes:
+time limit
+quality target
+blind comparison
+must match a feature
+must launch same day
+constrained toolset
+Low virality often comes from low stakes.
+C. Novelty
+Does it feel fresh, not like generic AI content?
+Examples of low-novelty packaging:
+“Claude Code tutorial”
+“How to use AI agents”
+“Build an app with AI”
+Examples of high-novelty packaging:
+“We rebuilt a viral product”
+“We tested whether the hype was fake”
+“We isolated the feature that made this blow up”
+D. Visual promise
+Can the thumbnail / hero image tell a story fast?
+Good visual ingredients:
+original product vs your version
+countdown timer
+progress board
+before/after
+dramatic feature comparison
+“viral object” on left, your build on right
+E. Emotional engine
+What emotion drives the piece?
+Best emotions for your format:
+curiosity
+challenge tension
+surprise
+competence aspiration
+skepticism
+delight
+If a piece is purely informative, virality drops.
+F. Shareability
+Would someone send this to:
+a founder,
+a builder friend,
+a colleague,
+an AI enthusiast?
+High-share reasons:
+“You should see how simple this actually was”
+“This breakdown explains why this product spread”
+“This is how you’d build it”
+G. Identity pull
+Does watching this make the viewer feel like:
+an insider,
+a smart builder,
+an early adopter,
+someone who understands what’s actually happening?
+Identity is huge. People share things that reinforce how they see themselves.
+H. Clipability
+Can you extract 3–5 short moments?
+Examples:
+“We found the real trick”
+“The hardest part had nothing to do with AI”
+“This took 4 prompts to crack”
+“This one feature made the whole product work”
+If a piece has no clip-worthy moments, it’s harder to grow distribution.
+Final virality score
+Use this formula:
+Virality Score =
+Instant curiosity × 2
+Stakes × 1.5
+Novelty × 2
+Visual promise × 1.5
+Emotional engine × 1.5
+Shareability × 1.5
+Identity pull × 1.5
+Clipability × 1
+Max score = 57.5
+Decision rule
+46+ = high viral potential
+38–45 = strong
+30–37 = decent, but improve packaging
+below 30 = weak packaging even if the build is good
+Important rule
+If Hook Score is high but Virality Score is low, do not drop the idea.
+Instead, repackage it:
+add a time constraint
+narrow to one killer feature
+add a blind test
+frame it as myth-busting
+compare your version against the original
+
+4) Tagline for the channel
+You need one main tagline and maybe 2–3 alternates depending on whether you want it to sound more creator-ish, builder-ish, or analytical.
+Best overall tagline
+We reverse engineer trending AI products and rebuild what actually matters.
+Why this works:
+“reverse engineer” = analytical
+“trending AI products” = hook source
+“rebuild” = action
+“what actually matters” = insight / anti-hype angle
+Strong alternatives
+More creator-friendly
+We break down viral AI products and rebuild them from scratch.
+More high-energy
+The internet finds the hottest AI products. We try to rebuild them.
+More analytical
+We test whether trending AI products are real innovation or just smart packaging.
+More educational
+Learn AI product building by reverse engineering what the internet already loves.
+More mission-driven
+Find the hook. Decode the product. Rebuild the core.
+My recommendation
+Use this as the public-facing one:
+We reverse engineer trending AI products and rebuild what actually matters.
+And this as the internal editorial mantra:
+Find the hook. Decode the product. Rebuild the core.
+
+5) Newsletter template
+The newsletter should feel like a premium field report, not a blog post.
+It should be:
+fast to scan,
+story-driven,
+visual,
+and easy to repurpose into video.
+Newsletter structure
+1. Subject line
+Use one of these patterns:
+We Rebuilt Today’s #1 Product Hunt Launch
+This AI Demo Went Viral. Here’s How We’d Build It
+We Tried to Recreate a Trending GitHub Project
+The Real Trick Behind This Viral AI Product
+Can Claude Code Rebuild This?
+Goal:
+Make the subject line sound like a mission, not a newsletter.
+
+2. Opening hook
+3–5 lines max.
+Template:
+what happened,
+why it got attention,
+what challenge you’re taking on.
+Example:
+Today’s hook: a product that just broke out on Product Hunt because it made X feel insanely easy.
+The question isn’t whether it’s cool.
+The question is: can we recreate the core experience ourselves fast enough to understand what actually made it work?
+
+3. The object of the week
+A compact profile card.
+Include:
+name
+source of discovery
+why it’s trending
+one-line value proposition
+public signal snapshot
+Images/artifacts to add
+hero screenshot of the product/demo/repo
+source badge image: Product Hunt, GitHub Trending, Show HN, X, etc.
+signal snapshot card with stars/upvotes/engagement markers
+optional tweet screenshot if the social proof matters
+This section should visually answer:
+Why are we paying attention to this at all?
+
+4. Why it worked
+This is a short teardown.
+Use 3 mini-subsections:
+What users saw
+What made it feel magical
+What probably drove the virality
+Images/artifacts to add
+annotated screenshot with arrows/callouts
+“magic breakdown” diagram
+side-by-side of product surface vs inferred backend logic
+This is where your analytical voice starts shining.
+
+5. The rebuild brief
+This section makes the issue feel like a challenge.
+Include:
+objective
+constraints
+tool stack
+what counts as success
+what you are deliberately ignoring
+Template:
+Goal: recreate the core user experience, not the full production product.
+Constraint: only use Claude Code + standard APIs + 90 minutes.
+Success = if a new user feels the same “aha” moment in our version.
+Images/artifacts to add
+challenge card
+timer graphic
+feature checklist
+“scope line” graphic showing what’s in/out
+
+6. How we think it works
+This is the reverse-engineering layer.
+Break into:
+probable inputs
+model / workflow
+orchestration
+UX layer
+hidden complexity
+Images/artifacts to add
+simple architecture diagram
+flowchart
+block diagram
+“core loop” illustration
+Keep this visually clean. One page / one image should make the logic obvious.
+
+7. The build log
+This is the heart of the issue.
+Use a progression format:
+Attempt 1
+What broke
+What changed
+Attempt 2
+What finally worked
+This section should feel alive, not polished to death.
+Images/artifacts to add
+screenshots of iterations
+before/after comparisons
+code snippet screenshots only if visually useful
+short GIFs or linked clips
+debugging snapshots
+“decision cards” with key pivots
+Important:
+Don’t add too much raw code in the newsletter. Show code only when it teaches a specific decision.
+
+8. Final comparison
+This is where tension resolves.
+Compare:
+original product
+your rebuilt version
+what matched
+what didn’t
+what was harder than expected
+what turned out to be easier than expected
+Images/artifacts to add
+side-by-side product comparison
+feature matrix
+scorecard
+blind test panel if possible
+This section is critical for satisfaction.
+
+9. The real lesson
+This is the transfer layer.
+Use a format like:
+Lesson 1: the wow factor was actually ___
+Lesson 2: the hardest part was ___
+Lesson 3: if you were building this from scratch, start with ___
+This is where readers walk away smarter.
+Images/artifacts to add
+distilled framework card
+reusable checklist
+“what builders should copy” panel
+
+10. Build takeaway / reusable asset
+Give the reader something they can use.
+Options:
+prompt template
+mini architecture
+starter repo
+reusable workflow
+design pattern
+agent loop pattern
+evaluation checklist
+Images/artifacts to add
+downloadable template preview
+repository preview card
+one-page cheat sheet
+This makes the newsletter more save-worthy.
+
+11. End with next week’s tease
+Keep an open loop.
+Examples:
+Next week, we’re testing whether a viral X demo is mostly UX theater.
+We found a GitHub repo exploding right now, and I think the hard part is not what people think.
+We may try a blind comparison next: original vs rebuilt.
+This improves return rate.
+
+Recommended visual system for the newsletter
+Every issue should have a predictable visual language.
+Must-have image/artifact types
+Use these every issue:
+Hero screenshot
+the original product/demo/repo
+Signal card
+upvotes, stars, engagement, ranking, trend source
+Annotated teardown screenshot
+arrows, labels, highlighted interaction moments
+Build brief card
+goal, constraints, success criteria
+Architecture diagram
+simple inferred system flow
+Iteration gallery
+2–4 screenshots showing progress
+Final side-by-side comparison
+original vs rebuilt
+Lessons card
+concise, reusable takeaways
+Nice-to-have visuals
+timeline graphic
+timer / countdown
+failure log card
+“harder than expected / easier than expected” split card
+blind test result card
+simple benchmark chart
+prompt or workflow card
+Avoid
+huge code dumps
+too many stock images
+decorative visuals with no informational value
+long screenshots without annotations
+Your visuals should do one of three jobs:
+prove it,
+explain it,
+compare it.
+
+Suggested one-issue template in compact form
+You can operationalize every issue like this:
+Newsletter issue skeleton
+Title / subject line
+Mission-driven, curiosity-heavy
+1. The hook
+What broke out and why anyone cares
+2. The object
+Quick profile of the product/demo/repo
+3. Why it spread
+Emotional + functional diagnosis
+4. The rebuild challenge
+Goal, constraints, stack, success criteria
+5. How we think it works
+Reverse-engineered system breakdown
+6. The build
+Attempts, failures, pivots, progress
+7. The result
+Final demo and comparison
+8. What we learned
+3–5 sharp lessons
+9. Reusable asset
+Prompt, repo, checklist, pattern
+10. Next week’s tease
+Open loop
+
+Final recommendation
+If you want this to feel like a real brand from day one, define the channel as:
+Brand promise
+We reverse engineer trending AI products and rebuild what actually matters.
+Editorial mantra
+Find the hook. Decode the product. Rebuild the core.
+Core content test
+Before publishing, every piece should satisfy:
+strong external hook
+clear challenge
+visible progress
+satisfying comparison
+transferable lesson
+That is the formula that makes this bigger than a newsletter.
+The next useful step is to turn this into a Notion-style operating doc with:
+weekly sourcing workflow,
+scoring sheet,
+issue tracker,
+thumbnail/title formulas,
+and a 12-episode content map.
+
+
+

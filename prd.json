@@ -1,0 +1,685 @@
+{
+  "project": "everything-content-skills",
+  "description": "7 skills to take the team from idea discovery to published newsletter. Each skill is a standalone Claude Code skill that can be invoked by any team member.",
+  "brand": {
+    "tagline": "We reverse engineer trending AI products and rebuild what actually matters.",
+    "editorial_mantra": "Find the hook. Decode the product. Rebuild the core.",
+    "core_content_test": [
+      "Strong external hook",
+      "Clear challenge",
+      "Visible progress",
+      "Satisfying comparison",
+      "Transferable lesson"
+    ],
+    "target_audience": [
+      "Builders",
+      "AI-curious professionals",
+      "Aspiring technical creators",
+      "Founders / operators / developers"
+    ]
+  },
+  "pipeline": [
+    "idea-scout",
+    "hook-scorer",
+    "pillar-matcher",
+    "virality-scorer",
+    "newsletter-writer",
+    "visual-asset-planner",
+    "newsletter-reviewer"
+  ],
+  "skills": [
+    {
+      "id": "idea-scout",
+      "name": "Idea Scout",
+      "status": "not_started",
+      "priority": 1,
+      "description": "Scans trending sources (Product Hunt, GitHub Trending, Show HN, X/Twitter viral demos) and produces a shortlist of candidate ideas with signal snapshots. This is the top-of-funnel — it feeds candidates into the Hook Scorer.",
+      "trigger_phrases": [
+        "scout ideas",
+        "find trending AI products",
+        "what's trending",
+        "source ideas",
+        "idea hunt"
+      ],
+      "inputs": [
+        "competitors.json (existing tracked sources)",
+        "User-specified platforms to scan (default: all)",
+        "Optional: niche filter or keyword"
+      ],
+      "outputs": [
+        {
+          "name": "idea_shortlist",
+          "format": "JSON array",
+          "fields": [
+            "name",
+            "source (PH / GitHub / HN / X)",
+            "url",
+            "one_line_value_prop",
+            "signal_snapshot (stars, upvotes, engagement count, trend rank)",
+            "discovered_date",
+            "why_its_trending (1-2 sentences)"
+          ]
+        }
+      ],
+      "acceptance_criteria": [
+        "Returns 5-10 candidates per run",
+        "Each candidate has a valid URL and signal snapshot",
+        "Covers at least 2 different platforms",
+        "Signal data is from the last 72 hours",
+        "No duplicates from previous runs"
+      ],
+      "references": {
+        "strategy_sections": [
+          "Hook scoring — examples of high scorers (PH launch, GitHub repo exploding, viral X demo, Show HN thread)",
+          "Content pillars — Viral Rebuild sources (PH launches, GitHub repos, X demos, Show HN products)"
+        ]
+      },
+      "depends_on": []
+    },
+    {
+      "id": "hook-scorer",
+      "name": "Hook Scorer",
+      "status": "not_started",
+      "priority": 2,
+      "description": "Takes a candidate idea and runs it through a 3-question fast filter, then a full 8-dimension weighted scoring system (max 62.5). Outputs a score, per-dimension breakdown, and a go/no-go decision.",
+      "trigger_phrases": [
+        "score this hook",
+        "is this idea worth covering",
+        "hook score",
+        "evaluate this idea",
+        "should we cover this"
+      ],
+      "inputs": [
+        "Idea name + URL (from Idea Scout output or user-provided)",
+        "Brief description of the product/demo/repo",
+        "Optional: signal snapshot data"
+      ],
+      "outputs": [
+        {
+          "name": "hook_score_report",
+          "format": "structured report",
+          "fields": [
+            "fast_filter (3 yes/no questions + pass/fail)",
+            "dimension_scores (8 dimensions, each 1-5)",
+            "weighted_total (max 62.5)",
+            "decision (must_cover / strong_candidate / timing_dependent / reject)",
+            "reasoning (1-2 sentences per dimension)"
+          ]
+        }
+      ],
+      "scoring_system": {
+        "fast_filter": {
+          "questions": [
+            "Would someone click this in under 3 seconds?",
+            "Can we rebuild the core in 1-2 focused sessions?",
+            "Will the audience learn something reusable?"
+          ],
+          "rule": "All 3 must be YES to proceed to full scoring"
+        },
+        "dimensions": [
+          {
+            "name": "Attention Strength",
+            "weight": 2,
+            "question": "Will a smart internet-native person care instantly?",
+            "scale": "1=obscure, 2=mildly interesting niche, 3=decent momentum in one community, 4=clearly trending visibly, 5=breakout with obvious curiosity"
+          },
+          {
+            "name": "Rebuildability",
+            "weight": 2,
+            "question": "Can we recreate the core experience fast enough for content?",
+            "scale": "1=too complex/infra-heavy, 2=possible but impractical, 3=hard but stripped-down version feasible, 4=feasible with clear scoping, 5=ideal for fast reverse-engineer"
+          },
+          {
+            "name": "Teachability",
+            "weight": 2,
+            "question": "Will rebuilding this naturally teach something valuable?",
+            "scale": "1=little transferable learning, 2=mostly spectacle, 3=one good lesson, 4=several reusable lessons, 5=deeply instructive while entertaining"
+          },
+          {
+            "name": "Visual Payoff",
+            "weight": 1.5,
+            "question": "Will the audience see obvious progress and a satisfying end result?",
+            "scale": "1=mostly backend/invisible, 2=difficult to show, 3=somewhat demo-able, 4=visibly satisfying, 5=highly screen-friendly and thumbnail-friendly"
+          },
+          {
+            "name": "Reveal Potential",
+            "weight": 1.5,
+            "question": "Is there likely to be a surprising insight?",
+            "scale": "1=no insight beyond 'we built it', 3=one decent reveal, 5=multiple non-obvious takeaways",
+            "examples": [
+              "The wow factor was mostly UX",
+              "The hard part wasn't the AI",
+              "This looked magical but was mostly orchestration",
+              "The original moat is not where people think"
+            ]
+          },
+          {
+            "name": "Originality Safety",
+            "weight": 1,
+            "question": "Can you cover this without feeling like a lazy clone?",
+            "scale": "1=feels derivative, 2=hard to differentiate, 3=possible with careful framing, 4=clearly transformative, 5=easy to make original"
+          },
+          {
+            "name": "Audience Fit",
+            "weight": 1.5,
+            "question": "Does this fit your audience's identity?",
+            "scale": "1=interesting but wrong audience, 3=somewhat relevant, 5=perfect overlap"
+          },
+          {
+            "name": "Format Elasticity",
+            "weight": 1,
+            "question": "Can this become multiple content assets (newsletter, video, short clip, tweet thread, repo, community challenge)?",
+            "scale": "1=one-off, 3=two formats, 5=content flywheel material"
+          }
+        ],
+        "max_score": 62.5,
+        "thresholds": {
+          "must_cover": 50,
+          "strong_candidate": 42,
+          "timing_dependent": 34,
+          "reject": "below 34"
+        }
+      },
+      "acceptance_criteria": [
+        "Fast filter runs first — if any answer is NO, returns reject without full scoring",
+        "All 8 dimensions scored with reasoning",
+        "Weighted total matches formula exactly",
+        "Decision maps correctly to threshold bands",
+        "Report is scannable in under 30 seconds"
+      ],
+      "references": {
+        "strategy_sections": ["Hook scoring mechanism (full section)"]
+      },
+      "depends_on": ["idea-scout"]
+    },
+    {
+      "id": "pillar-matcher",
+      "name": "Pillar Matcher",
+      "status": "not_started",
+      "priority": 3,
+      "description": "Takes a scored idea and recommends which of the 7 content pillars best fits it. Suggests 3-5 title options using that pillar's patterns. Considers the recommended pillar mix to maintain content variety.",
+      "trigger_phrases": [
+        "which pillar",
+        "match pillar",
+        "what format should this be",
+        "suggest titles",
+        "content format"
+      ],
+      "inputs": [
+        "Idea name + description",
+        "Hook score report (from Hook Scorer)",
+        "Previous issues' pillar assignments (to maintain mix)"
+      ],
+      "outputs": [
+        {
+          "name": "pillar_recommendation",
+          "format": "structured report",
+          "fields": [
+            "primary_pillar (name + rationale)",
+            "secondary_pillar (alternative if primary doesn't work out)",
+            "suggested_titles (3-5 options following pillar's title patterns)",
+            "pillar_mix_status (how this fits the recommended 12-issue distribution)"
+          ]
+        }
+      ],
+      "pillars": [
+        {
+          "id": "viral-rebuild",
+          "name": "Viral Rebuild",
+          "core_question": "Can we recreate the core experience ourselves?",
+          "best_for": "Product Hunt launches, GitHub repos, X demos, Show HN products",
+          "title_patterns": [
+            "We Rebuilt Today's #1 Product Hunt Launch",
+            "This AI Demo Went Viral. We Tried to Recreate It",
+            "We Reverse Engineered a Trending GitHub AI Tool"
+          ],
+          "recommended_frequency": "5 per 12 issues"
+        },
+        {
+          "id": "hype-audit",
+          "name": "Hype Audit",
+          "core_question": "Is this actually impressive, or just smart presentation?",
+          "title_patterns": [
+            "Is This Viral AI Product Actually Hard to Build?",
+            "We Tested the Hype Behind This Trending AI Tool"
+          ],
+          "recommended_frequency": "2 per 12 issues"
+        },
+        {
+          "id": "feature-extraction",
+          "name": "Feature Extraction",
+          "core_question": "What is the smallest piece that made this product spread?",
+          "title_patterns": [
+            "We Rebuilt the One Feature That Made This App Blow Up",
+            "The Real Magic of This AI Product Was Just One Workflow"
+          ],
+          "recommended_frequency": "2 per 12 issues"
+        },
+        {
+          "id": "better-than-original",
+          "name": "Better Than the Original",
+          "core_question": "What would we change if we built this ourselves?",
+          "title_patterns": [
+            "We Rebuilt This Viral AI Tool — But Made It Better",
+            "This Product Was Brilliant, But We Fixed Its Biggest Flaw"
+          ],
+          "recommended_frequency": "2 per 12 issues"
+        },
+        {
+          "id": "build-under-constraint",
+          "name": "Build Under Constraint",
+          "core_question": "Can we build this with a specific limitation?",
+          "constraint_ideas": [
+            "Only Claude Code",
+            "Only open-source tools",
+            "90-minute limit",
+            "Under $20",
+            "No frontend libraries",
+            "One-shot prompt only"
+          ],
+          "title_patterns": [
+            "We Had 90 Minutes to Rebuild This AI Product",
+            "Could Claude Code Recreate This Viral Tool in One Session?"
+          ],
+          "recommended_frequency": "as needed"
+        },
+        {
+          "id": "open-source-equivalent",
+          "name": "Open-Source Equivalent",
+          "core_question": "What's the simplest useful version anyone can build?",
+          "title_patterns": [
+            "We Built an Open Version of This Popular AI Product",
+            "Here's the Lean Version of a Viral AI Startup"
+          ],
+          "recommended_frequency": "as needed"
+        },
+        {
+          "id": "lessons-from-build",
+          "name": "Lessons From the Build",
+          "core_question": "What patterns keep showing up in winning AI products?",
+          "title_patterns": [
+            "What 10 Viral AI Products Had in Common",
+            "The UX Patterns Behind the Best AI Demos",
+            "What Rebuilding 12 AI Products Taught Us"
+          ],
+          "recommended_frequency": "1 per 12 issues"
+        }
+      ],
+      "recommended_mix_per_12": {
+        "viral-rebuild": 5,
+        "hype-audit": 2,
+        "feature-extraction": 2,
+        "better-than-original": 2,
+        "lessons-from-build": 1
+      },
+      "acceptance_criteria": [
+        "Recommends primary + secondary pillar with reasoning",
+        "Titles follow the pillar's established patterns",
+        "Mix tracking warns if a pillar is overused or neglected",
+        "At least 3 title options provided"
+      ],
+      "references": {
+        "strategy_sections": ["Content pillars (full section)"]
+      },
+      "depends_on": ["hook-scorer"]
+    },
+    {
+      "id": "virality-scorer",
+      "name": "Virality Scorer",
+      "status": "not_started",
+      "priority": 4,
+      "description": "Scores the story packaging of a piece on 8 dimensions (max 57.5). This is different from hook scoring — a hook can be good for building but still fail as content. If hook score is high but virality score is low, suggests repackaging strategies instead of dropping the idea.",
+      "trigger_phrases": [
+        "score virality",
+        "will this go viral",
+        "check the packaging",
+        "virality score",
+        "is the packaging strong enough"
+      ],
+      "inputs": [
+        "Idea name + chosen pillar + proposed title",
+        "Hook score report",
+        "Draft angle/framing (how you plan to present it)"
+      ],
+      "outputs": [
+        {
+          "name": "virality_score_report",
+          "format": "structured report",
+          "fields": [
+            "dimension_scores (8 dimensions, each 1-5)",
+            "weighted_total (max 57.5)",
+            "verdict (high_viral_potential / strong / decent_improve_packaging / weak_packaging)",
+            "reasoning per dimension",
+            "repackaging_suggestions (if hook high but virality low)"
+          ]
+        }
+      ],
+      "scoring_system": {
+        "dimensions": [
+          {
+            "name": "Instant Curiosity",
+            "weight": 2,
+            "question": "Would the title alone trigger 'Wait, what?'?"
+          },
+          {
+            "name": "Stakes",
+            "weight": 1.5,
+            "question": "Is there a clear consequence or tension (time limit, quality target, blind comparison, constrained toolset)?",
+            "note": "Low virality often comes from low stakes"
+          },
+          {
+            "name": "Novelty",
+            "weight": 2,
+            "question": "Does it feel fresh, not like generic AI content?",
+            "low_novelty_examples": ["Claude Code tutorial", "How to use AI agents", "Build an app with AI"],
+            "high_novelty_examples": ["We rebuilt a viral product", "We tested whether the hype was fake", "We isolated the feature that made this blow up"]
+          },
+          {
+            "name": "Visual Promise",
+            "weight": 1.5,
+            "question": "Can the thumbnail/hero image tell a story fast?",
+            "good_ingredients": ["original vs your version", "countdown timer", "progress board", "before/after", "dramatic feature comparison"]
+          },
+          {
+            "name": "Emotional Engine",
+            "weight": 1.5,
+            "question": "What emotion drives the piece?",
+            "best_emotions": ["curiosity", "challenge tension", "surprise", "competence aspiration", "skepticism", "delight"],
+            "note": "If purely informative, virality drops"
+          },
+          {
+            "name": "Shareability",
+            "weight": 1.5,
+            "question": "Would someone send this to a founder, builder friend, colleague, or AI enthusiast?",
+            "high_share_reasons": [
+              "You should see how simple this actually was",
+              "This breakdown explains why this product spread",
+              "This is how you'd build it"
+            ]
+          },
+          {
+            "name": "Identity Pull",
+            "weight": 1.5,
+            "question": "Does this make the viewer feel like an insider, smart builder, early adopter, or someone who understands what's actually happening?"
+          },
+          {
+            "name": "Clipability",
+            "weight": 1,
+            "question": "Can you extract 3-5 short moments?",
+            "clip_examples": [
+              "We found the real trick",
+              "The hardest part had nothing to do with AI",
+              "This took 4 prompts to crack",
+              "This one feature made the whole product work"
+            ]
+          }
+        ],
+        "max_score": 57.5,
+        "thresholds": {
+          "high_viral_potential": 46,
+          "strong": 38,
+          "decent_improve_packaging": 30,
+          "weak_packaging": "below 30"
+        }
+      },
+      "repackaging_strategies": {
+        "trigger": "Hook score >= 42 AND Virality score < 30",
+        "options": [
+          "Add a time constraint",
+          "Narrow to one killer feature",
+          "Add a blind test",
+          "Frame it as myth-busting",
+          "Compare your version against the original"
+        ]
+      },
+      "acceptance_criteria": [
+        "All 8 dimensions scored with reasoning",
+        "Weighted total matches formula",
+        "Verdict maps to correct threshold band",
+        "Repackaging suggestions trigger automatically when hook high + virality low",
+        "Clearly distinguishes between hook quality and packaging quality in the report"
+      ],
+      "references": {
+        "strategy_sections": ["Virality scoring mechanism (full section)"]
+      },
+      "depends_on": ["hook-scorer", "pillar-matcher"]
+    },
+    {
+      "id": "newsletter-writer",
+      "name": "Newsletter Writer",
+      "status": "not_started",
+      "priority": 5,
+      "description": "Writes the full 10-section newsletter draft following the template. Takes all prior skill outputs (scored idea, pillar, title, virality assessment) plus the team's build notes/logs, and produces a complete draft with visual callouts marked inline.",
+      "trigger_phrases": [
+        "write the newsletter",
+        "draft the issue",
+        "write this up",
+        "newsletter draft",
+        "create the issue"
+      ],
+      "inputs": [
+        "Idea name + URL + signal snapshot",
+        "Hook score report",
+        "Pillar assignment + chosen title",
+        "Virality score report",
+        "Build notes/logs (attempts, failures, pivots, final result)",
+        "Screenshots/artifacts from the build",
+        "Lessons learned (team notes)"
+      ],
+      "outputs": [
+        {
+          "name": "newsletter_draft",
+          "format": "markdown with visual callouts",
+          "sections": [
+            "Subject line — mission-driven, curiosity-heavy",
+            "The Hook — 3-5 lines: what happened, why it got attention, what challenge you're taking on",
+            "The Object — compact profile card (name, source, why trending, value prop, signal snapshot) + [VISUAL: hero screenshot, signal card]",
+            "Why It Worked — 3 subsections: what users saw, what made it feel magical, what drove virality + [VISUAL: annotated screenshot, magic breakdown diagram]",
+            "The Rebuild Brief — objective, constraints, tool stack, success criteria, what you're ignoring + [VISUAL: challenge card, feature checklist]",
+            "How We Think It Works — probable inputs, model/workflow, orchestration, UX layer, hidden complexity + [VISUAL: architecture diagram, flowchart]",
+            "The Build Log — attempt progression with failures and pivots + [VISUAL: iteration screenshots, before/after, debugging snapshots]",
+            "Final Comparison — original vs rebuilt, what matched, what didn't, harder/easier than expected + [VISUAL: side-by-side, feature matrix, scorecard]",
+            "The Real Lesson — 3-5 sharp transferable lessons + [VISUAL: framework card, reusable checklist]",
+            "Build Takeaway — reusable asset (prompt template, mini architecture, starter repo, workflow, pattern) + [VISUAL: template preview, cheat sheet]",
+            "Next Week's Tease — open loop for return rate"
+          ]
+        }
+      ],
+      "voice_guidelines": {
+        "tone": "Premium field report, not a blog post",
+        "qualities": ["Fast to scan", "Story-driven", "Visual", "Easy to repurpose into video"],
+        "code_rule": "Don't add too much raw code. Show code only when it teaches a specific decision.",
+        "subject_line_patterns": [
+          "We Rebuilt Today's #1 Product Hunt Launch",
+          "This AI Demo Went Viral. Here's How We'd Build It",
+          "We Tried to Recreate a Trending GitHub Project",
+          "The Real Trick Behind This Viral AI Product",
+          "Can Claude Code Rebuild This?"
+        ]
+      },
+      "acceptance_criteria": [
+        "All 10 sections present and populated (11 including subject line)",
+        "Visual callouts marked inline for every section that needs them",
+        "Subject line follows mission-driven pattern, not generic blog title",
+        "Opening hook is 3-5 lines max",
+        "Build log shows progression (attempts, failures, pivots) — feels alive, not over-polished",
+        "Lessons are transferable, not just 'we built it'",
+        "Includes a reusable asset the reader can take away",
+        "Next week tease creates an open loop",
+        "No large code dumps — code only when it teaches a decision"
+      ],
+      "references": {
+        "strategy_sections": [
+          "Newsletter template (full section)",
+          "Recommended visual system for the newsletter",
+          "Suggested one-issue template in compact form"
+        ]
+      },
+      "depends_on": ["hook-scorer", "pillar-matcher", "virality-scorer"]
+    },
+    {
+      "id": "visual-asset-planner",
+      "name": "Visual Asset Planner",
+      "status": "not_started",
+      "priority": 6,
+      "description": "Reads a newsletter draft and generates a per-section shot list of all required images and artifacts. Categorizes each as must-have or nice-to-have. Every visual must prove it, explain it, or compare it — no decorative filler.",
+      "trigger_phrases": [
+        "plan visuals",
+        "what images do we need",
+        "visual checklist",
+        "shot list",
+        "asset plan"
+      ],
+      "inputs": [
+        "Newsletter draft (from Newsletter Writer)",
+        "Available screenshots/artifacts from the build"
+      ],
+      "outputs": [
+        {
+          "name": "visual_asset_plan",
+          "format": "structured checklist",
+          "fields_per_asset": [
+            "section (which newsletter section it belongs to)",
+            "asset_type (screenshot, diagram, card, comparison, etc.)",
+            "description (what it should show)",
+            "priority (must-have / nice-to-have)",
+            "purpose (prove it / explain it / compare it)",
+            "specs (dimensions, annotations needed, layout notes)",
+            "source (capture from product / create / generate)"
+          ]
+        }
+      ],
+      "must_have_types": [
+        "Hero screenshot — the original product/demo/repo",
+        "Signal card — upvotes, stars, engagement, ranking, trend source",
+        "Annotated teardown screenshot — arrows, labels, highlighted interaction moments",
+        "Build brief card — goal, constraints, success criteria",
+        "Architecture diagram — simple inferred system flow",
+        "Iteration gallery — 2-4 screenshots showing progress",
+        "Final side-by-side comparison — original vs rebuilt",
+        "Lessons card — concise, reusable takeaways"
+      ],
+      "nice_to_have_types": [
+        "Timeline graphic",
+        "Timer / countdown",
+        "Failure log card",
+        "Harder than expected / easier than expected split card",
+        "Blind test result card",
+        "Simple benchmark chart",
+        "Prompt or workflow card"
+      ],
+      "rules": [
+        "Every visual must do one of three jobs: prove it, explain it, or compare it",
+        "No huge code dumps as images",
+        "No stock images",
+        "No decorative visuals with no informational value",
+        "No long screenshots without annotations"
+      ],
+      "acceptance_criteria": [
+        "Every newsletter section has at least one visual assigned",
+        "All 8 must-have types are present in the plan",
+        "Each asset tagged with purpose (prove/explain/compare)",
+        "No decorative-only visuals included",
+        "Specs are actionable enough for a designer or image generator to execute"
+      ],
+      "references": {
+        "strategy_sections": ["Recommended visual system for the newsletter"]
+      },
+      "depends_on": ["newsletter-writer"]
+    },
+    {
+      "id": "newsletter-reviewer",
+      "name": "Newsletter Reviewer",
+      "status": "not_started",
+      "priority": 7,
+      "description": "Final quality gate before publishing. Reviews the complete newsletter draft + visual plan against template completeness, brand voice, the 5-point core content test, and visual system compliance. Returns a pass/revise verdict with specific, actionable feedback.",
+      "trigger_phrases": [
+        "review the newsletter",
+        "is this ready to publish",
+        "newsletter QA",
+        "check the draft",
+        "final review"
+      ],
+      "inputs": [
+        "Newsletter draft (from Newsletter Writer)",
+        "Visual asset plan (from Visual Asset Planner)",
+        "Hook score report",
+        "Virality score report"
+      ],
+      "outputs": [
+        {
+          "name": "review_report",
+          "format": "structured verdict",
+          "fields": [
+            "verdict (pass / revise)",
+            "template_completeness (checklist of 10 sections — present/missing/weak)",
+            "core_content_test (5 checks — pass/fail each)",
+            "brand_voice_check (field report tone, not blog post — pass/fail with notes)",
+            "visual_system_check (must-haves present, no decorative filler — pass/fail)",
+            "specific_feedback (section-by-section actionable notes)",
+            "strengths (what's working well — so the writer doesn't break it)",
+            "revision_priority (ordered list of what to fix first)"
+          ]
+        }
+      ],
+      "review_criteria": {
+        "template_completeness": {
+          "required_sections": [
+            "Subject line",
+            "The Hook (3-5 lines)",
+            "The Object (profile card + visuals)",
+            "Why It Worked (3 subsections)",
+            "The Rebuild Brief (goal, constraints, stack, success, ignoring)",
+            "How We Think It Works (system breakdown)",
+            "The Build Log (progression with failures)",
+            "Final Comparison (original vs rebuilt)",
+            "The Real Lesson (3-5 lessons)",
+            "Build Takeaway (reusable asset)",
+            "Next Week's Tease (open loop)"
+          ]
+        },
+        "core_content_test": [
+          "Strong external hook — is the source object genuinely trending?",
+          "Clear challenge — is the rebuild brief specific and compelling?",
+          "Visible progress — does the build log show real iteration?",
+          "Satisfying comparison — is original vs rebuilt genuinely insightful?",
+          "Transferable lesson — will the reader walk away smarter?"
+        ],
+        "brand_voice": {
+          "must_feel_like": "Premium field report",
+          "must_not_feel_like": "Blog post, tutorial, or generic AI content",
+          "check_points": [
+            "Subject line sounds like a mission, not a newsletter",
+            "Opening hook is 3-5 lines, not a paragraph",
+            "Build log feels alive, not polished to death",
+            "Code shown only when it teaches a decision",
+            "Lessons are sharp and transferable, not generic"
+          ]
+        },
+        "visual_system": {
+          "must_have_all_8": true,
+          "no_decorative_filler": true,
+          "every_visual_proves_explains_or_compares": true
+        }
+      },
+      "acceptance_criteria": [
+        "Checks all 10+1 sections for presence and quality",
+        "Runs all 5 core content test checks",
+        "Brand voice check catches blog-post-ish tone",
+        "Visual system check validates must-have coverage",
+        "Feedback is section-specific and actionable (not vague)",
+        "Strengths are called out so good work isn't accidentally undone",
+        "Revision priorities are ordered by impact"
+      ],
+      "references": {
+        "strategy_sections": [
+          "Newsletter template — all sections",
+          "Final recommendation — core content test",
+          "Tagline and brand voice",
+          "Recommended visual system"
+        ]
+      },
+      "depends_on": ["newsletter-writer", "visual-asset-planner"]
+    }
+  ]
+}

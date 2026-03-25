@@ -1,0 +1,28 @@
+# Content Sources - YouTube Channels to Monitor
+youtube:
+  - url: "https://www.youtube.com/@nateherk"
+    name: "Nate Herk"
+  - url: "https://www.youtube.com/@BenAI92"
+    name: "Ben AI"
+  - url: "https://www.youtube.com/@LiamOttley"
+    name: "Liam Ottley"
+  - url: "https://www.youtube.com/@nicksaraev"
+    name: "Nick Saraev"
+  - url: "https://www.youtube.com/@Itssssss_Jack"
+    name: "Jack"
+  - url: "https://www.youtube.com/@simonscrapes"
+    name: "Simon Scrapes"
+  - url: "https://www.youtube.com/@TinaHuang1"
+    name: "Tina Huang"
+  - url: "https://www.youtube.com/@VickyZhaoBEEAMP"
+    name: "Vicky Zhao"
+  - url: "https://www.youtube.com/@EthanNelsonScalewithAI"
+    name: "Ethan Nelson - Scale with AI"
+  - url: "https://www.youtube.com/@futurepedia_io"
+    name: "Futurepedia"
+  - url: "https://www.youtube.com/@jonocatliff"
+    name: "Jono Catliff"
+
+blogs: []
+substacks: []
+x_twitter: []

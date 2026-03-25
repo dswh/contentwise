@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "last_updated": "2026-03-23T00:00:00Z",
+    "version": 1,
+    "description": "Master competitor tracking file — YouTube channels, blogs, substacks, newsletters, X/Twitter"
+  },
+  "youtube_channels": [
+    {
+      "id": "nateherk",
+      "name": "Nate Herk",
+      "handle": "@nateherk",
+      "channel_url": "https://www.youtube.com/@nateherk",
+      "videos_url": "https://www.youtube.com/@nateherk/videos",
+      "niche_tags": ["ai", "automation"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "benai92",
+      "name": "Ben AI",
+      "handle": "@BenAI92",
+      "channel_url": "https://www.youtube.com/@BenAI92",
+      "videos_url": "https://www.youtube.com/@BenAI92/videos",
+      "niche_tags": ["ai"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "liamottley",
+      "name": "Liam Ottley",
+      "handle": "@LiamOttley",
+      "channel_url": "https://www.youtube.com/@LiamOttley",
+      "videos_url": "https://www.youtube.com/@LiamOttley/videos",
+      "niche_tags": ["ai", "agency"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "nicksaraev",
+      "name": "Nick Saraev",
+      "handle": "@nicksaraev",
+      "channel_url": "https://www.youtube.com/@nicksaraev",
+      "videos_url": "https://www.youtube.com/@nicksaraev/videos",
+      "niche_tags": ["ai", "automation", "productivity"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "jack",
+      "name": "Jack",
+      "handle": "@Itssssss_Jack",
+      "channel_url": "https://www.youtube.com/@Itssssss_Jack",
+      "videos_url": "https://www.youtube.com/@Itssssss_Jack/videos",
+      "niche_tags": ["ai"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "simonscrapes",
+      "name": "Simon Scrapes",
+      "handle": "@simonscrapes",
+      "channel_url": "https://www.youtube.com/@simonscrapes",
+      "videos_url": "https://www.youtube.com/@simonscrapes/videos",
+      "niche_tags": ["scraping", "automation"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "tinahuang",
+      "name": "Tina Huang",
+      "handle": "@TinaHuang1",
+      "channel_url": "https://www.youtube.com/@TinaHuang1",
+      "videos_url": "https://www.youtube.com/@TinaHuang1/videos",
+      "niche_tags": ["ai", "career", "tech"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "vickyzhao",
+      "name": "Vicky Zhao",
+      "handle": "@VickyZhaoBEEAMP",
+      "channel_url": "https://www.youtube.com/@VickyZhaoBEEAMP",
+      "videos_url": "https://www.youtube.com/@VickyZhaoBEEAMP/videos",
+      "niche_tags": ["learning", "productivity"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "ethannelson",
+      "name": "Ethan Nelson - Scale with AI",
+      "handle": "@EthanNelsonScalewithAI",
+      "channel_url": "https://www.youtube.com/@EthanNelsonScalewithAI",
+      "videos_url": "https://www.youtube.com/@EthanNelsonScalewithAI/videos",
+      "niche_tags": ["ai", "business", "scaling"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "futurepedia",
+      "name": "Futurepedia",
+      "handle": "@futurepedia_io",
+      "channel_url": "https://www.youtube.com/@futurepedia_io",
+      "videos_url": "https://www.youtube.com/@futurepedia_io/videos",
+      "niche_tags": ["ai", "tools", "reviews"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    },
+    {
+      "id": "jonocatliff",
+      "name": "Jono Catliff",
+      "handle": "@jonocatliff",
+      "channel_url": "https://www.youtube.com/@jonocatliff",
+      "videos_url": "https://www.youtube.com/@jonocatliff/videos",
+      "niche_tags": ["ai"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_videos": []
+    }
+  ],
+  "youtube_video_schema": {
+    "_description": "Schema for each video object inside recent_videos[]",
+    "_example": {
+      "video_id": "dQw4w9WgXcQ",
+      "title": "Video Title Here",
+      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "published_date": "2026-03-22T14:00:00Z",
+      "thumbnail_url": "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+      "thumbnail_local": "screenshots/nateherk/dQw4w9WgXcQ_thumb.jpg",
+      "duration": "12:34",
+      "views": 45000,
+      "likes": 2100,
+      "comments_count": 340,
+      "timestamps": [
+        { "time": "0:00", "label": "Intro" },
+        { "time": "1:23", "label": "Main Topic" },
+        { "time": "8:45", "label": "Demo" }
+      ],
+      "transcript_summary": "Brief AI-generated summary of video content from yt-dlp transcript",
+      "transcript_file": "transcripts/nateherk_dQw4w9WgXcQ.txt",
+      "tags": ["ai", "automation", "tutorial"],
+      "hook": "First 1-2 sentences or description text that draws people in",
+      "screenshots": [
+        "screenshots/nateherk/dQw4w9WgXcQ_frame_1.png",
+        "screenshots/nateherk/dQw4w9WgXcQ_frame_2.png"
+      ],
+      "analysis": {
+        "content_format": "tutorial",
+        "estimated_performance": "high",
+        "why_it_works": "",
+        "content_ideas_inspired": []
+      }
+    }
+  },
+  "blogs": [
+    {
+      "id": "simonwillison",
+      "name": "Simon Willison",
+      "source_url": "https://simonwillison.net/",
+      "niche_tags": ["ai", "llm", "python", "open-source"],
+      "notes": "Prolific AI/LLM blogger, creator of Datasette. Deep technical posts on LLM tooling.",
+      "last_scanned": null,
+      "recent_posts": []
+    }
+  ],
+  "blog_post_schema": {
+    "_description": "Schema for each blog post entry",
+    "_example": {
+      "source_id": "blog-name",
+      "source_name": "Blog Name",
+      "source_url": "https://example.com/blog",
+      "post_title": "Post Title",
+      "post_url": "https://example.com/blog/post-slug",
+      "published_date": "2026-03-22",
+      "author": "Author Name",
+      "content_text": "Full scraped content or first 500 words",
+      "content_summary": "AI-generated summary",
+      "screenshots": ["screenshots/blogs/blogname_post1.png"],
+      "engagement": {
+        "comments": 12,
+        "shares": null,
+        "likes": null
+      },
+      "tags": [],
+      "analysis": {
+        "content_format": "deep-dive",
+        "why_it_works": "",
+        "content_ideas_inspired": []
+      }
+    }
+  },
+  "substacks": [
+    {
+      "id": "openclaw",
+      "name": "OpenClaw",
+      "profile_url": "https://substack.com/@openclaw",
+      "niche_tags": ["ai", "open-source"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_posts": []
+    },
+    {
+      "id": "compoundwithai",
+      "name": "Compound with AI",
+      "profile_url": "https://substack.com/@compoundwithai",
+      "niche_tags": ["ai", "business"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_posts": []
+    },
+    {
+      "id": "a16z",
+      "name": "a16z",
+      "profile_url": "https://substack.com/@a16z",
+      "niche_tags": ["vc", "tech", "ai"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_posts": []
+    },
+    {
+      "id": "artemxtech",
+      "name": "Artem x Tech",
+      "profile_url": "https://substack.com/@artemxtech",
+      "niche_tags": ["ai", "tech"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_posts": []
+    },
+    {
+      "id": "rasbt",
+      "name": "Sebastian Raschka",
+      "profile_url": "https://substack.com/@rasbt",
+      "niche_tags": ["ml", "ai", "research"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_posts": []
+    },
+    {
+      "id": "wyndo",
+      "name": "Wyndo",
+      "profile_url": "https://substack.com/@wyndo",
+      "niche_tags": ["ai"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_posts": []
+    },
+    {
+      "id": "aisupremacy",
+      "name": "AI Supremacy",
+      "profile_url": "https://substack.com/@aisupremacy",
+      "niche_tags": ["ai", "news"],
+      "notes": "",
+      "last_scanned": null,
+      "recent_posts": []
+    }
+  ],
+  "substack_post_schema": {
+    "_description": "Schema for each Substack newsletter post",
+    "_example": {
+      "source_id": "someone",
+      "source_name": "Someone's Newsletter",
+      "source_url": "https://someone.substack.com",
+      "post_title": "Newsletter Issue Title",
+      "post_url": "https://someone.substack.com/p/post-slug",
+      "published_date": "2026-03-22",
+      "content_text": "Full scraped content or first 500 words",
+      "content_summary": "AI-generated summary",
+      "screenshots": ["screenshots/substacks/someone_post1.png"],
+      "engagement": {
+        "likes": 89,
+        "comments": 15,
+        "restacks": 7
+      },
+      "tags": [],
+      "analysis": {
+        "content_format": "newsletter",
+        "why_it_works": "",
+        "content_ideas_inspired": []
+      }
+    }
+  },
+  "x_twitter": [
+    {
+      "id": "x_timeline",
+      "name": "X Home Timeline",
+      "url": "https://x.com/",
+      "scan_approach": "scroll_and_screenshot",
+      "scroll_count": 30,
+      "notes": "Open Chrome, go to x.com, scroll 30 times capturing screenshots and notable high-engagement posts",
+      "last_scanned": null,
+      "scans": []
+    }
+  ],
+  "x_twitter_schema": {
+    "_description": "Schema for X/Twitter — general timeline scrolling, screenshots every scroll batch",
+    "_example": {
+      "scan_type": "timeline_scroll",
+      "scan_date": "2026-03-23",
+      "total_scrolls": 30,
+      "screenshots": [
+        "screenshots/x/scroll_batch_01.png",
+        "screenshots/x/scroll_batch_02.png",
+        "screenshots/x/scroll_batch_03.png"
+      ],
+      "notable_posts": [
+        {
+          "author": "@username",
+          "author_name": "Display Name",
+          "post_url": "https://x.com/username/status/123456789",
+          "post_text": "The full tweet text...",
+          "posted_date": "2026-03-22T18:30:00Z",
+          "engagement": {
+            "likes": 5400,
+            "retweets": 890,
+            "replies": 234,
+            "bookmarks": 1200,
+            "views": 450000
+          },
+          "media_type": "image",
+          "screenshot": "screenshots/x/post_username_123456789.png",
+          "tags": ["ai", "hot-take"],
+          "analysis": {
+            "content_format": "thread",
+            "why_it_works": "",
+            "content_ideas_inspired": []
+          }
+        }
+      ]
+    }
+  },
+  "aggregation_runs": []
+}
