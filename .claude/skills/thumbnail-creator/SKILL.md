@@ -163,7 +163,7 @@ Read `references/templates.md` for the exact template strings. Fill the placehol
 Call `mcp__nanobanana__generate_image` with:
 - `prompt`: the filled, enhanced template
 - `aspect_ratio`: "16:9"
-- `negative_prompt`: "text, watermark, words, letters, typography, logo, blurry, low quality, stock photo, generic, clipart, cartoon, anime, bright white background, flat design, UI mockup, realistic human face, neon grid, generic AI brain, circuit board cliche"
+- `negative_prompt`: "text, watermark, words, letters, typography, logo, blurry, low quality, stock photo, generic, clipart, cartoon, anime, bright white background, flat design, UI mockup, realistic human face, neon grid, generic AI brain, circuit board cliche, scattered geometric shapes, floating circles, floating rectangles, floating triangles, decorative confetti, sprinkled shapes"
 - `model_tier`: "nb2" (Gemini 3.1 Flash Image — 4K at Flash speed, best balance of quality and speed for thumbnails)
 - `output_path`: save to `thumbnails/` in the working directory or user-specified path
 - `n`: 1

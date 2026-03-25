@@ -31,7 +31,7 @@ Place the logo from the second image into the lower-right corner of the first im
 Append this to every prompt, adapting colors per palette:
 
 ```
-Style: high-contrast collage surrealism. Mix photography, classical engraving, and bold vector shapes. Saturated [PALETTE_PRIMARY] and [PALETTE_SECONDARY] color pops against [PALETTE_BG]. Halftone dot texture, risograph grain, paper texture overlays. Bold editorial composition — magazine cover energy, not subtle art. Ultra-readable at phone size. No text.
+Style: high-contrast collage surrealism. Mix photography and classical engraving. Saturated [PALETTE_PRIMARY] and [PALETTE_SECONDARY] color pops against [PALETTE_BG]. Halftone dot texture, risograph grain, paper texture overlays. Bold editorial composition — magazine cover energy, not subtle art. Clean background, no scattered shapes or decorative elements. Ultra-readable at phone size. No text.
 ```
 
 ---
@@ -81,7 +81,7 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 **Use for:** AI + human collaboration, tool reviews, "AI is/isn't replacing X," human judgment pieces.
 
 ```
-16:9 thumbnail. A classical Indian stone sculpture or figure (Chola bronze, Khajuraho sandstone, Gandhara style, or Mughal miniature style), [STATUE_POSE], recolored in bold [PALETTE_PRIMARY] and [PALETTE_SECONDARY] duotone. The statue is wearing [MODERN_PROP] and interacting with [METAPHOR_OBJECT]. Background: large flat [PALETTE_BG] color block with [GEOMETRIC_SHAPE] in contrasting color behind the statue. Halftone dot texture overlay at 30% opacity. Bold cut-out style — the statue feels like a magazine clipping pasted onto the background. Risograph printing effect on edges. Composition: statue fills 60% of frame, off-center. Vibe: [MOOD] — irreverent, editorial, like a zine cover. No text.
+16:9 thumbnail. A classical Indian stone sculpture or figure (Chola bronze, Khajuraho sandstone, Gandhara style, or Mughal miniature style), [STATUE_POSE], recolored in bold [PALETTE_PRIMARY] and [PALETTE_SECONDARY] duotone. The statue is wearing [MODERN_PROP] and interacting with [METAPHOR_OBJECT]. Background: clean flat [PALETTE_BG] color block. Halftone dot texture overlay at 30% opacity. Bold cut-out style — the statue feels like a magazine clipping pasted onto the background. Risograph printing effect on edges. Clean composition, no scattered shapes or decorative geometric elements. Composition: statue fills 60% of frame, off-center. Vibe: [MOOD] — irreverent, editorial, like a zine cover. No text.
 ```
 
 **Placeholders:**
@@ -96,7 +96,7 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 **Use for:** Concept pieces, tutorials, rebuilds, "here's what we found" — the workhorse template.
 
 ```
-16:9 thumbnail. A single [METAPHOR_OBJECT] rendered at surreally oversized scale — [SIZE_CONTEXT]. Style: photographic realism on the object but placed against a bold flat [PALETTE_BG] background with [PALETTE_PRIMARY] geometric shapes and [PALETTE_SECONDARY] accents. The object casts a sharp dramatic shadow. Halftone texture on the shadow. A small [CONTRASTING_ELEMENT] placed near the object for scale contrast. Composition: object occupies 50-70% of frame, slightly off-center. Bold, punchy, editorial. Vibe: [MOOD]. No text.
+16:9 thumbnail. A single [METAPHOR_OBJECT] rendered at surreally oversized scale — [SIZE_CONTEXT]. Style: photographic realism on the object placed against a clean flat [PALETTE_BG] background. The object casts a sharp dramatic shadow with halftone texture. A small [CONTRASTING_ELEMENT] placed near the object for scale contrast. No decorative shapes, no scattered elements — just the object, the shadow, and the scale contrast. Composition: object occupies 50-70% of frame, slightly off-center. Bold, punchy, editorial. Vibe: [MOOD]. No text.
 ```
 
 **Placeholders:**
@@ -111,7 +111,7 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 **Use for:** Comparisons, audits, "X vs Y," "old way vs new way," tension between approaches.
 
 ```
-16:9 thumbnail. The frame split vertically (or diagonally) into two contrasting halves. Left side: [LEFT_CONCEPT] rendered in [PALETTE_PRIMARY] tones with [LEFT_TEXTURE]. Right side: [RIGHT_CONCEPT] rendered in [PALETTE_SECONDARY] tones with [RIGHT_TEXTURE]. The split line is [SPLIT_STYLE]. Where the two halves meet, elements from each side bleed slightly into the other — a controlled collision. Background elements: halftone dots, geometric shapes, cut-out arrows or lines connecting elements across the divide. Vibe: [MOOD] — visual tension, the viewer's eye bounces between sides. No text.
+16:9 thumbnail. The frame split vertically (or diagonally) into two contrasting halves. Left side: [LEFT_CONCEPT] rendered in [PALETTE_PRIMARY] tones with [LEFT_TEXTURE]. Right side: [RIGHT_CONCEPT] rendered in [PALETTE_SECONDARY] tones with [RIGHT_TEXTURE]. The split line is [SPLIT_STYLE]. Where the two halves meet, elements from each side bleed slightly into the other — a controlled collision. No scattered decorative elements — let the two halves and the split line do all the work. Vibe: [MOOD] — visual tension, the viewer's eye bounces between sides. No text.
 ```
 
 **Placeholders:**
@@ -127,7 +127,7 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 **Use for:** Tool stacks, roundups, multi-concept pieces, "lessons learned" compilations.
 
 ```
-16:9 thumbnail. An editorial collage arrangement on a [PALETTE_BG] background. Elements layered and overlapping at playful angles: [ELEMENT_1], [ELEMENT_2], [ELEMENT_3], connected by [CONNECTING_ELEMENT]. Each element has a different visual treatment — one is photographic, one is classical engraving style, one is bold flat vector. Halftone dots, paper tape strips, and risograph texture throughout. One element is significantly larger than the others, creating hierarchy. Small geometric shapes (circles, triangles) scattered as accents in [PALETTE_PRIMARY] and [PALETTE_SECONDARY]. Composition: controlled chaos — busy but composed, like a designer's mood board. Vibe: [MOOD]. No text.
+16:9 thumbnail. An editorial collage arrangement on a [PALETTE_BG] background. Elements layered and overlapping at playful angles: [ELEMENT_1], [ELEMENT_2], [ELEMENT_3], connected by [CONNECTING_ELEMENT]. Each element has a different visual treatment — one is photographic, one is classical engraving style, one is bold flat vector. Halftone dots, paper tape strips, and risograph texture throughout. One element is significantly larger than the others, creating hierarchy. No scattered geometric shapes — the collage elements themselves provide all the visual interest. Composition: controlled chaos — busy but composed, like a designer's mood board. Vibe: [MOOD]. No text.
 ```
 
 **Placeholders:**
@@ -141,7 +141,7 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 **Use for:** Big-picture takes, paradigm shifts, journey pieces, "the landscape is changing."
 
 ```
-16:9 thumbnail. A surreal landscape scene combining photography and illustration. [LANDSCAPE_BASE] stretching to the horizon, but with [SURREAL_ELEMENT] that makes it dreamlike and impossible. The sky is a bold flat [PALETTE_PRIMARY] with [SKY_DETAIL]. In the midground: [FOCAL_OBJECT] — rendered in contrasting [PALETTE_SECONDARY], sharply defined, the eye goes here first. Classical engraving-style clouds or flora mixed with geometric vector shapes. Halftone grain on the landscape, clean bold color on the focal object. Vibe: [MOOD] — epic but playful, surreal but grounded. No text.
+16:9 thumbnail. A surreal landscape scene combining photography and illustration. [LANDSCAPE_BASE] stretching to the horizon, but with [SURREAL_ELEMENT] that makes it dreamlike and impossible. The sky is a bold flat [PALETTE_PRIMARY] with [SKY_DETAIL]. In the midground: [FOCAL_OBJECT] — rendered in contrasting [PALETTE_SECONDARY], sharply defined, the eye goes here first. Halftone grain on the landscape, clean bold color on the focal object. No floating geometric shapes or decorative accents. Vibe: [MOOD] — epic but playful, surreal but grounded. No text.
 ```
 
 **Placeholders:**
@@ -157,13 +157,13 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 - Emotional core: The comeback kid. They were down and now they're swinging.
 - Palette: **Fire & Gold** (comeback energy, bold confidence)
 - Template: **Statue Remix**
-- Concept: A Chola bronze Nataraja (dancing Shiva) figure, recolored in electric red and gold duotone, but instead of the ring of fire, a ring of glowing code symbols. One hand holds a modern game controller instead of the drum. Behind: a massive gold circle like a rising sun. Halftone texture. The cosmic dance of destruction and creation — the comeback.
+- Concept: A Chola bronze Nataraja (dancing Shiva) figure, recolored in electric red and gold duotone, but instead of the ring of fire, a ring of glowing code symbols. One hand holds a modern game controller instead of the drum. Clean background. Halftone texture on the figure. The cosmic dance of destruction and creation — the comeback.
 
 **Article:** "We rebuilt today's #1 Product Hunt launch"
 - Emotional core: Cracking something open to see how it works
 - Palette: **Electric Teal**
 - Template: **Object Metaphor**
-- Concept: A gorgeous golden Fabergé egg cracked open at surreal scale, revealing tiny clockwork gears and springs inside — but one gear is replaced by a teal cursor arrow. The egg sits on a black background with bold teal geometric shapes behind it.
+- Concept: A gorgeous golden Fabergé egg cracked open at surreal scale, revealing tiny clockwork gears and springs inside — but one gear is replaced by a teal cursor arrow. The egg sits on a clean black background. No decorative shapes.
 
 **Article:** "Is this viral product hype or real?"
 - Emotional core: Peeling back the performance
@@ -175,7 +175,7 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 - Emotional core: Adrenaline, controlled chaos, racing yourself
 - Palette: **Fire & Gold**
 - Template: **Object Metaphor**
-- Concept: A massive vintage kitchen timer at surreal scale (filling 70% of frame), the dial cranked to 90, vibrating with motion blur lines. The timer is classic red and chrome, sitting on a black background with bold mustard yellow geometric speed lines radiating outward.
+- Concept: A massive vintage kitchen timer at surreal scale (filling 70% of frame), the dial cranked to 90, vibrating with motion blur lines. The timer is classic red and chrome, sitting on a clean black background. Motion blur on the dial hand only.
 
 **Article:** "What 10 viral AI products had in common"
 - Emotional core: Finding the pattern, the aha moment
@@ -187,4 +187,4 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 - Emotional core: Empowerment, anyone can build this
 - Palette: **Neon Garden**
 - Template: **Hero Landscape**
-- Concept: A surreal garden scene where mint-green plants grow through and over the skeleton of an abandoned chrome machine. The plants are lush and alive, the machine is geometric and rusted. Pink flowers bloom from the exhaust pipes. Black background with scattered green geometric shapes.
+- Concept: A surreal garden scene where mint-green plants grow through and over the skeleton of an abandoned chrome machine. The plants are lush and alive, the machine is geometric and rusted. Pink flowers bloom from the exhaust pipes. Clean black background.
