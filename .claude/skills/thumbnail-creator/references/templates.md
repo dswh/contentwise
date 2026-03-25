@@ -4,6 +4,28 @@ These are the exact prompt templates. Fill every placeholder, then send to nano 
 
 ---
 
+## Logo Compositing (Step 2 — after generating the thumbnail)
+
+When the article features a specific product/tool, composite the logo AFTER generating the base thumbnail. Never try to bake the logo into the generation prompt — image generators can't render real logos accurately.
+
+**Prompt for logo compositing step:**
+```
+Place the logo from the second image into the lower-right corner of the first image. The logo should be small (about 8-12% of frame width), slightly translucent at 70-80% opacity, with a soft glow or drop shadow matching the scene's accent color [PALETTE_PRIMARY]. Blend it naturally into the composition. Do not alter the rest of the image.
+```
+
+**nano banana call:**
+- `mode`: "edit"
+- `input_image_path_1`: the generated thumbnail from Step 1
+- `input_image_path_2`: the logo file from `logos/` directory
+- `prompt`: the compositing prompt above
+- `model_tier`: "nb2"
+
+**Available logos:** supabase_logo.png, linkedin_learning_logo.png, openai.svg, claude_logo.jpeg, gemini_logo.jpeg, openai_logo.png, n8n_logo.png, cursor_logo.png, gumloop_white_logo.jpeg, claude_cowork.png, lovable_logo.png, claude_code_logo.png
+
+**When to skip:** If the article is about a concept/trend rather than a specific product, skip the logo. Not every thumbnail needs one.
+
+---
+
 ## Style DNA (inject into every prompt)
 
 Append this to every prompt, adapting colors per palette:
@@ -66,7 +88,6 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 - [STATUE_POSE]: "in profile looking right" / "hand raised thoughtfully" / "looking down at something in its hands"
 - [MODERN_PROP]: headphones, sunglasses, VR goggles, airpods, a smartwatch, a baseball cap worn backwards
 - [METAPHOR_OBJECT]: the visual metaphor for the article's concept — a lobster claw, a chess piece, a golden key, a magnifying glass, a tiny rocket
-- [GEOMETRIC_SHAPE]: "a large circle" / "a bold diagonal stripe" / "a triangle" / "overlapping rectangles"
 
 ---
 
