@@ -76,17 +76,23 @@ Style: high-contrast collage surrealism. Mix photography and classical engraving
 
 ---
 
-## Template 1: Statue Remix
+## Template 1: Vintage Remix
 
-**Use for:** AI + human collaboration, tool reviews, "AI is/isn't replacing X," human judgment pieces.
+**Use for:** AI + human collaboration, tool reviews, "AI is/isn't replacing X," human judgment pieces, comeback stories.
+
+Pick one of these vintage illustration styles and remix it with modern props:
+- **Anatomical illustration** — Da Vinci Vitruvian Man style, old medical anatomy plates, cross-section diagrams
+- **Patent drawing** — Victorian-era technical patent sketches, mechanical blueprints, inventor's notebook style
+- **Renaissance hands** — Michelangelo Creation of Adam hands, old master drawing studies
+- **Vintage automata** — 18th century clockwork figures, mechanical chess players, wind-up machines
 
 ```
-16:9 thumbnail. A classical Indian stone sculpture or figure (Chola bronze, Khajuraho sandstone, Gandhara style, or Mughal miniature style), [STATUE_POSE], recolored in bold [PALETTE_PRIMARY] and [PALETTE_SECONDARY] duotone. The statue is wearing [MODERN_PROP] and interacting with [METAPHOR_OBJECT]. Background: clean flat [PALETTE_BG] color block. Halftone dot texture overlay at 30% opacity. Bold cut-out style — the statue feels like a magazine clipping pasted onto the background. Risograph printing effect on edges. Clean composition, no scattered shapes or decorative geometric elements. Composition: statue fills 60% of frame, off-center. Vibe: [MOOD] — irreverent, editorial, like a zine cover. No text.
+16:9 thumbnail. A [VINTAGE_STYLE] illustration, recolored in bold [PALETTE_PRIMARY] and [PALETTE_SECONDARY] duotone. The illustration is remixed with [MODERN_PROP] — creating a collision between old knowledge and new tech. It is interacting with [METAPHOR_OBJECT]. Background: clean flat [PALETTE_BG] color block. Halftone dot texture overlay at 30% opacity. Bold cut-out style — feels like a vintage engraving ripped from a book and pasted onto a modern background. Risograph printing effect on edges. Clean composition, no scattered shapes or decorative elements. Composition: illustration fills 60% of frame, off-center. Vibe: [MOOD] — irreverent, editorial, like a zine cover. No text.
 ```
 
 **Placeholders:**
-- [STATUE_POSE]: "in profile looking right" / "hand raised thoughtfully" / "looking down at something in its hands"
-- [MODERN_PROP]: headphones, sunglasses, VR goggles, airpods, a smartwatch, a baseball cap worn backwards
+- [VINTAGE_STYLE]: "Da Vinci-style anatomical drawing" / "Victorian patent sketch" / "Renaissance hand study" / "18th century clockwork automaton illustration"
+- [MODERN_PROP]: airpods, VR goggles, a smartwatch, wireless earbuds, a gaming headset, a USB cable as a vein
 - [METAPHOR_OBJECT]: the visual metaphor for the article's concept — a lobster claw, a chess piece, a golden key, a magnifying glass, a tiny rocket
 
 ---
@@ -156,8 +162,8 @@ Style: high-contrast collage surrealism. Mix photography and classical engraving
 **Article:** "GPT-5.4 — OpenAI is Back"
 - Emotional core: The comeback kid. They were down and now they're swinging.
 - Palette: **Fire & Gold** (comeback energy, bold confidence)
-- Template: **Statue Remix**
-- Concept: A Chola bronze Nataraja (dancing Shiva) figure, recolored in electric red and gold duotone, but instead of the ring of fire, a ring of glowing code symbols. One hand holds a modern game controller instead of the drum. Clean background. Halftone texture on the figure. The cosmic dance of destruction and creation — the comeback.
+- Template: **Vintage Remix**
+- Concept: A Victorian patent drawing of a clockwork boxing automaton, recolored in electric red and gold duotone. The mechanical figure has one fist raised in victory, the other holding a modern game controller. Gears and springs visible in cross-section. Clean black background. Halftone texture. The old machine learning to fight again — the comeback.
 
 **Article:** "We rebuilt today's #1 Product Hunt launch"
 - Emotional core: Cracking something open to see how it works
