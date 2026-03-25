@@ -1,4 +1,4 @@
-# Thumbnail Prompt Templates — Perplexity-Inspired Aesthetic
+# Thumbnail Prompt Templates — Collage Surrealism
 
 These are the exact prompt templates. Fill every placeholder, then send to nano banana with `model_tier: "nb2"` (Gemini 3.1 Flash Image — 4K at Flash speed).
 
@@ -6,166 +6,164 @@ These are the exact prompt templates. Fill every placeholder, then send to nano 
 
 ## Style DNA (inject into every prompt)
 
-Every prompt should end with this style block (adapt colors per palette):
+Append this to every prompt, adapting colors per palette:
 
 ```
-Style: dark atmospheric, cinematic depth of field, [PALETTE_BASE] base with [PALETTE_ACCENT] accent lighting and [PALETTE_GLOW] atmospheric glow. Subtle film grain, slight chromatic aberration at edges. Foreground slightly blurred, midground sharp, background hazy with light streaks. Premium editorial quality — Perplexity blog aesthetic. Dreamlike, ethereal, tactile. No text.
+Style: high-contrast collage surrealism. Mix photography, classical engraving, and bold vector shapes. Saturated [PALETTE_PRIMARY] and [PALETTE_SECONDARY] color pops against [PALETTE_BG]. Halftone dot texture, risograph grain, paper texture overlays. Bold editorial composition — magazine cover energy, not subtle art. Ultra-readable at phone size. No text.
 ```
 
 ---
 
-## Palette Reference (copy hex codes into prompts)
+## Palette Reference
 
-### Teal Depths
-- Base: deep teal-black (#091717)
-- Accent: turquoise (#20808D)
-- Glow: cyan-teal aurora
-- Atmosphere: cool mist, teal particle haze
+### Electric Teal
+- Primary: turquoise (#00CED1)
+- Secondary: mustard yellow (#E8A317)
+- Background: black or off-white
+- Texture: halftone dots in teal, newsprint grain
 
-### Amber Signal
-- Base: pure black (#0D0D0D)
-- Accent: warm amber (#F5A623)
-- Glow: golden haze, warm light leaks
-- Atmosphere: dusty golden mist, ember particles
+### Fire & Gold
+- Primary: electric red (#FF2D2D)
+- Secondary: mustard (#F5A623)
+- Background: deep black
+- Texture: risograph grain, bold red halftone
 
-### Coral Tension
-- Base: dark warm black (#1A0A0A)
-- Accent: coral-red (#FF6B6B)
-- Glow: red-pink atmospheric wash
-- Atmosphere: warm crimson haze, tension lighting
+### Grape Soda
+- Primary: deep purple (#7C3AED)
+- Secondary: mint green (#6EE7B7)
+- Background: white or cream (#FAFAF5)
+- Texture: soft paper grain, vintage print feel
 
-### Violet Dream
-- Base: deep indigo-black (#0D0A1A)
-- Accent: soft purple (#A78BFA)
-- Glow: lavender nebula, purple aurora
-- Atmosphere: soft violet mist, dreamy particles
+### Coral Punch
+- Primary: coral (#FF6B6B)
+- Secondary: teal (#20808D)
+- Background: off-white (#FAFAF5)
+- Texture: newsprint, editorial halftone
 
-### Emerald Growth
-- Base: forest black (#0A1A0D)
-- Accent: emerald (#34D399)
-- Glow: green bioluminescence
-- Atmosphere: organic mist, spore-like particles
+### Neon Garden
+- Primary: mint green (#34D399)
+- Secondary: electric pink (#FF69B4)
+- Background: black
+- Texture: organic noise, spore-like grain
 
-### White Light
-- Base: near-black (#0D0D0D)
-- Accent: cool white (#F0F0F0)
-- Glow: clean white radiance, sharp highlights
-- Atmosphere: minimal haze, precise, clinical clarity
-
----
-
-## Template 1: Floating Object
-
-**Use for:** Articles with one central concept, product reviews, model analysis, "here's what we found."
-
-```
-16:9 thumbnail. A [CONCEPT_OBJECT] floating weightlessly in dark atmospheric space. The object is translucent, catching and refracting [PALETTE_ACCENT] light from within. Subtle internal structures visible through the glass-like surface — [INTERNAL_DETAIL]. The object casts a soft [PALETTE_GLOW] glow onto the surrounding atmosphere. Background: [PALETTE_BASE] gradient fading to pure black at edges, with faint [PALETTE_GLOW] aurora streaks in the upper portion. Scattered particle effects — tiny floating points of light like dust in a beam. Dramatic [LIGHTING_DIRECTION] lighting creating strong contrast. Atmosphere: [MOOD]. Style: dark atmospheric, cinematic depth, Perplexity blog aesthetic, subtle film grain, dreamlike. No text.
-```
-
-**Placeholder guide:**
-- [CONCEPT_OBJECT]: the weird-angle metaphor rendered as a 3D object — "a cracked geode revealing amber crystal formations" not "a rock"
-- [INTERNAL_DETAIL]: what you see inside the glass — "tiny wireframe circuits" or "swirling golden liquid" or "a miniature landscape"
-- [LIGHTING_DIRECTION]: side-lit / backlit / rim-lit / lit from below
+### Monochrome Pop
+- Primary: one saturated pop color (chosen per article)
+- Secondary: black
+- Background: white
+- Texture: sharp halftone, high contrast
 
 ---
 
-## Template 2: Landscape Journey
+## Template 1: Statue Remix
 
-**Use for:** Comparison pieces, choosing between approaches, progression stories, "two paths" narratives.
+**Use for:** AI + human collaboration, tool reviews, "AI is/isn't replacing X," human judgment pieces.
 
 ```
-16:9 thumbnail. Dark vast atmospheric landscape at night. [PATH_DESCRIPTION]. The terrain is [TERRAIN_TYPE] — dark, textured, stretching to a misty horizon. Sky: [PALETTE_BASE] with [PALETTE_GLOW] atmospheric streaks — aurora-like bands of light across the upper third. Subtle particle effects in the air. Cinematic depth: foreground terrain slightly blurred, midground path sharp and luminous, background hazy with distant light. Atmosphere: [MOOD]. Style: dark atmospheric, cosmic scale, Perplexity blog aesthetic, film grain, dreamlike. No text.
+16:9 thumbnail. A classical Greek/Roman marble statue bust or figure, [STATUE_POSE], recolored in bold [PALETTE_PRIMARY] and [PALETTE_SECONDARY] duotone. The statue is wearing [MODERN_PROP] and interacting with [METAPHOR_OBJECT]. Background: large flat [PALETTE_BG] color block with [GEOMETRIC_SHAPE] in contrasting color behind the statue. Halftone dot texture overlay at 30% opacity. Bold cut-out style — the statue feels like a magazine clipping pasted onto the background. Risograph printing effect on edges. Composition: statue fills 60% of frame, off-center. Vibe: [MOOD] — irreverent, editorial, like a zine cover. No text.
 ```
 
-**Placeholder guide:**
-- [PATH_DESCRIPTION]: the core visual narrative — "A narrow teal-glowing path curves elegantly through darkness while a massive bright highway blazes on the distant horizon" or "Two diverging trails of light — one amber and steady, one violet and flickering — splitting from a single origin point"
-- [TERRAIN_TYPE]: "volcanic rock with faint moss" / "dark sand dunes" / "misty moorland" / "cracked obsidian plain"
+**Placeholders:**
+- [STATUE_POSE]: "in profile looking right" / "hand raised thoughtfully" / "looking down at something in its hands"
+- [MODERN_PROP]: headphones, sunglasses, VR goggles, airpods, a smartwatch, a baseball cap worn backwards
+- [METAPHOR_OBJECT]: the visual metaphor for the article's concept — a lobster claw, a chess piece, a golden key, a magnifying glass, a tiny rocket
+- [GEOMETRIC_SHAPE]: "a large circle" / "a bold diagonal stripe" / "a triangle" / "overlapping rectangles"
 
 ---
 
-## Template 3: Nature-Digital Fusion
+## Template 2: Object Metaphor (Surreal Scale)
 
-**Use for:** Building/growing things, ecosystems, open source, organic + engineered tension, community.
+**Use for:** Concept pieces, tutorials, rebuilds, "here's what we found" — the workhorse template.
 
 ```
-16:9 thumbnail. [ORGANIC_ELEMENT] growing from or merging with [DIGITAL_ELEMENT] in a dark atmospheric environment. The organic parts are lush, textured, alive — [ORGANIC_DETAIL]. The digital parts are clean wireframe, particle grid, or luminous data visualization — glowing in [PALETTE_ACCENT]. Where they meet: a beautiful tension zone where vines wrap around circuits, crystals grow from code, nature reclaims geometry. Lighting: [PALETTE_GLOW] bioluminescence from the organic elements, [PALETTE_ACCENT] glow from the digital elements. Background: [PALETTE_BASE] darkness with scattered light particles. Atmosphere: [MOOD]. Style: dark atmospheric, Perplexity blog aesthetic, nature meets technology, film grain. No text.
+16:9 thumbnail. A single [METAPHOR_OBJECT] rendered at surreally oversized scale — [SIZE_CONTEXT]. Style: photographic realism on the object but placed against a bold flat [PALETTE_BG] background with [PALETTE_PRIMARY] geometric shapes and [PALETTE_SECONDARY] accents. The object casts a sharp dramatic shadow. Halftone texture on the shadow. A small [CONTRASTING_ELEMENT] placed near the object for scale contrast. Composition: object occupies 50-70% of frame, slightly off-center. Bold, punchy, editorial. Vibe: [MOOD]. No text.
 ```
 
-**Placeholder guide:**
-- [ORGANIC_ELEMENT]: "dense moss and ferns" / "coral formations" / "crystal cave growths" / "ancient tree roots" / "bioluminescent fungi"
-- [DIGITAL_ELEMENT]: "a wireframe cube structure" / "a floating particle grid" / "translucent data streams" / "geometric light scaffolding"
-- [ORGANIC_DETAIL]: "individual leaf veins catching the light, dewdrops on moss, tiny spores floating upward"
+**Placeholders:**
+- [METAPHOR_OBJECT]: the weird Level 3 concept — "a cracked golden egg with a Post-it note inside" / "a massive vintage pressure gauge" / "a Swiss watch with code for gears"
+- [SIZE_CONTEXT]: "filling most of the frame as if it's 6 feet tall" / "so large it breaks the edges of the frame"
+- [CONTRASTING_ELEMENT]: something tiny that shows scale — "a miniature office chair" / "a tiny laptop" / "a small plant"
 
 ---
 
-## Template 4: Cosmic Vista
+## Template 3: Split / Versus
 
-**Use for:** Big-picture takes, paradigm shifts, future thinking, "the landscape is changing" pieces.
+**Use for:** Comparisons, audits, "X vs Y," "old way vs new way," tension between approaches.
 
 ```
-16:9 thumbnail. Vast atmospheric skyscape viewed from a dark elevated vantage point. [SKY_DESCRIPTION]. In the midground: [FOCAL_ELEMENT] — small against the vastness but sharply defined, catching [PALETTE_ACCENT] light. The ground/foreground is [GROUND_TYPE], dark and textured, anchoring the composition. Scale is epic — the viewer feels small. Light sources: [PALETTE_GLOW] from the sky phenomenon, [PALETTE_ACCENT] rim-lighting on the focal element. Atmosphere: [MOOD]. Style: dark atmospheric, cosmic scale, Perplexity blog aesthetic, subtle grain, awe-inspiring. No text.
+16:9 thumbnail. The frame split vertically (or diagonally) into two contrasting halves. Left side: [LEFT_CONCEPT] rendered in [PALETTE_PRIMARY] tones with [LEFT_TEXTURE]. Right side: [RIGHT_CONCEPT] rendered in [PALETTE_SECONDARY] tones with [RIGHT_TEXTURE]. The split line is [SPLIT_STYLE]. Where the two halves meet, elements from each side bleed slightly into the other — a controlled collision. Background elements: halftone dots, geometric shapes, cut-out arrows or lines connecting elements across the divide. Vibe: [MOOD] — visual tension, the viewer's eye bounces between sides. No text.
 ```
 
-**Placeholder guide:**
-- [SKY_DESCRIPTION]: "layered aurora bands of violet and amber sweeping across the horizon" / "a massive nebula-like cloud formation glowing coral from within" / "converging beams of white light piercing through storm clouds"
-- [FOCAL_ELEMENT]: "a lone translucent geometric monument" / "a small figure in silhouette at a cliff edge" / "a single glowing artifact on a pedestal"
-- [GROUND_TYPE]: "dark rocky cliff edge" / "mossy hilltop" / "sand dune ridge" / "cloud layer below"
+**Placeholders:**
+- [LEFT_CONCEPT]: one side of the comparison — "a polished chrome robot hand" / "a sleek modern building"
+- [RIGHT_CONCEPT]: the other side — "a weathered human hand" / "a classical Greek temple"
+- [SPLIT_STYLE]: "a jagged tear like ripped paper" / "a clean diagonal" / "a zigzag line" / "a bold colored stripe"
+- [LEFT_TEXTURE] / [RIGHT_TEXTURE]: "smooth gradient" vs "halftone grain" / "clean vector" vs "vintage engraving"
 
 ---
 
-## Template 5: Artifact Study
+## Template 4: Collage Board
 
-**Use for:** Product reviews, model benchmarks, "what we found when we tested this," deep-dive analysis.
+**Use for:** Tool stacks, roundups, multi-concept pieces, "lessons learned" compilations.
 
 ```
-16:9 thumbnail. A single [ARTIFACT] resting on a dark [SURFACE] surface, dramatically lit from [LIGHT_ANGLE] with [PALETTE_ACCENT] light. The artifact is [ARTIFACT_QUALITY] — showing signs of [CONDITION]. Around it: [ENVIRONMENTAL_DETAIL]. The lighting creates strong shadows and reveals texture — every imperfection and detail is visible. Background: [PALETTE_BASE] darkness, clean, uncluttered — all attention on the artifact. Atmosphere: [MOOD] — museum-like reverence meets forensic examination. Style: dark atmospheric, editorial still life, Perplexity blog aesthetic, film grain, tactile. No text.
+16:9 thumbnail. An editorial collage arrangement on a [PALETTE_BG] background. Elements layered and overlapping at playful angles: [ELEMENT_1], [ELEMENT_2], [ELEMENT_3], connected by [CONNECTING_ELEMENT]. Each element has a different visual treatment — one is photographic, one is classical engraving style, one is bold flat vector. Halftone dots, paper tape strips, and risograph texture throughout. One element is significantly larger than the others, creating hierarchy. Small geometric shapes (circles, triangles) scattered as accents in [PALETTE_PRIMARY] and [PALETTE_SECONDARY]. Composition: controlled chaos — busy but composed, like a designer's mood board. Vibe: [MOOD]. No text.
 ```
 
-**Placeholder guide:**
-- [ARTIFACT]: the weird-angle concept object — "a translucent racing trophy with a hairline crack running through the middle" / "a vintage speedometer with the needle bent past the maximum"
-- [SURFACE]: "polished obsidian" / "weathered oak" / "raw concrete" / "dark velvet"
-- [ARTIFACT_QUALITY]: "beautiful but imperfect" / "precisely engineered" / "ancient and worn" / "sleek and modern"
-- [CONDITION]: "recent use" / "careful assembly" / "controlled damage" / "partial assembly"
-- [ENVIRONMENTAL_DETAIL]: "faint particles floating in the light beam" / "a subtle reflection on the surface" / "scattered fragments of the same material"
-- [LIGHT_ANGLE]: "the left at 45 degrees" / "directly above, spotlight-style" / "behind, creating rim light and silhouette"
+**Placeholders:**
+- [ELEMENT_1/2/3]: 3-4 visual objects that represent the article's key concepts
+- [CONNECTING_ELEMENT]: "hand-drawn arrows" / "dotted lines" / "a flowing ribbon" / "electrical wire illustrations"
 
 ---
 
-## Concept Examples (Level 3 — Weird + Magnetic)
+## Template 5: Hero Landscape (Surreal)
 
-**Article:** "Cursor's Composer 2 is fast but not frontier"
-- Emotional core: The dignity of choosing the right tool for your workflow, not the most powerful
-- Palette: **Coral Tension** (honest assessment, tension between two approaches)
-- Template: **Landscape Journey**
-- Concept: A narrow teal-glowing racing lane curving elegantly through dark terrain while a massive multi-lane highway blazes with amber light on the distant horizon
-- Logo: cursor_logo.png as input image
+**Use for:** Big-picture takes, paradigm shifts, journey pieces, "the landscape is changing."
+
+```
+16:9 thumbnail. A surreal landscape scene combining photography and illustration. [LANDSCAPE_BASE] stretching to the horizon, but with [SURREAL_ELEMENT] that makes it dreamlike and impossible. The sky is a bold flat [PALETTE_PRIMARY] with [SKY_DETAIL]. In the midground: [FOCAL_OBJECT] — rendered in contrasting [PALETTE_SECONDARY], sharply defined, the eye goes here first. Classical engraving-style clouds or flora mixed with geometric vector shapes. Halftone grain on the landscape, clean bold color on the focal object. Vibe: [MOOD] — epic but playful, surreal but grounded. No text.
+```
+
+**Placeholders:**
+- [LANDSCAPE_BASE]: "a vast desert" / "rolling green hills" / "a calm ocean" / "a city seen from above"
+- [SURREAL_ELEMENT]: "the sand is made of tiny keyboard keys" / "the hills are circuit boards covered in moss" / "the ocean waves are made of paper pages"
+- [FOCAL_OBJECT]: the article's central metaphor placed in this landscape
+
+---
+
+## Concept Examples (Level 3 — Fun, Weird, Magnetic)
+
+**Article:** "GPT-5.4 — OpenAI is Back"
+- Emotional core: The comeback kid. They were down and now they're swinging.
+- Palette: **Fire & Gold** (comeback energy, bold confidence)
+- Template: **Statue Remix**
+- Concept: A classical Greek boxer statue, muscles tensed, recolored in electric red and gold duotone, wearing modern boxing gloves. One glove is raised in victory. Behind: a massive gold circle like a rising sun. Halftone texture. The statue has a fresh black eye but is grinning.
 
 **Article:** "We rebuilt today's #1 Product Hunt launch"
-- Emotional core: The thrill of cracking something open and seeing how it ticks
-- Palette: **Amber Signal** (excitement, the golden moment of discovery)
-- Template: **Floating Object**
-- Concept: A polished consumer product casing split open like a geode — the outside sleek and glossy, the inside revealing raw amber crystal formations where you expected circuits
+- Emotional core: Cracking something open to see how it works
+- Palette: **Electric Teal**
+- Template: **Object Metaphor**
+- Concept: A gorgeous golden Fabergé egg cracked open at surreal scale, revealing tiny clockwork gears and springs inside — but one gear is replaced by a teal cursor arrow. The egg sits on a black background with bold teal geometric shapes behind it.
 
-**Article:** "Is this viral AI product actually hard to build?"
-- Emotional core: Skepticism piercing through performance
-- Palette: **Coral Tension** (investigation, honest doubt)
-- Template: **Artifact Study**
-- Concept: A gorgeous ornate Fabergé egg cracked open on dark velvet — but inside, instead of jeweled treasure, a single mundane Post-it note, lit dramatically
+**Article:** "Is this viral product hype or real?"
+- Emotional core: Peeling back the performance
+- Palette: **Coral Punch**
+- Template: **Split / Versus**
+- Concept: Left half: a gleaming polished gold mask, smooth, perfect, lit beautifully. Right half: the same mask flipped to show the rough unpainted inside — scratches, seams, hot glue. Split by a jagged paper-tear line. Coral and teal halftone textures.
+
+**Article:** "90-minute rebuild challenge"
+- Emotional core: Adrenaline, controlled chaos, racing yourself
+- Palette: **Fire & Gold**
+- Template: **Object Metaphor**
+- Concept: A massive vintage kitchen timer at surreal scale (filling 70% of frame), the dial cranked to 90, vibrating with motion blur lines. The timer is classic red and chrome, sitting on a black background with bold mustard yellow geometric speed lines radiating outward.
 
 **Article:** "What 10 viral AI products had in common"
-- Emotional core: Patterns emerging from chaos, finding the signal
-- Palette: **Violet Dream** (big-picture synthesis, wonder)
-- Template: **Cosmic Vista**
-- Concept: A vast aurora-lit sky with ten small translucent spheres arranged in a constellation pattern, connected by faint violet light threads
+- Emotional core: Finding the pattern, the aha moment
+- Palette: **Grape Soda**
+- Template: **Collage Board**
+- Concept: A mood board arrangement — 10 small objects (a key, a magnet, a mirror, a spark, a bridge, a mask, a clock, a seed, a lens, a thread) overlapping at angles on a cream background, connected by hand-drawn purple arrows, one object (the thread) highlighted in mint green and pulling through all the others.
 
-**Article:** "We built an open-source alternative to this popular AI product"
+**Article:** "Open-source alternative to a popular AI product"
 - Emotional core: Empowerment, anyone can build this
-- Palette: **Emerald Growth** (organic, community, building)
-- Template: **Nature-Digital Fusion**
-- Concept: Dense luminescent moss growing over and reclaiming an abandoned wireframe structure, green bioluminescence revealing the code's skeleton beneath living growth
-
-**Article:** "The real architecture behind this viral AI demo"
-- Emotional core: Precision, seeing the elegant machinery
-- Palette: **White Light** (clarity, sharp technical focus)
-- Template: **Floating Object**
-- Concept: A translucent glass clockwork mechanism floating in darkness, every gear and spring visible, illuminated by a single sharp white beam revealing the internal logic
+- Palette: **Neon Garden**
+- Template: **Hero Landscape**
+- Concept: A surreal garden scene where mint-green plants grow through and over the skeleton of an abandoned chrome machine. The plants are lush and alive, the machine is geometric and rusted. Pink flowers bloom from the exhaust pipes. Black background with scattered green geometric shapes.

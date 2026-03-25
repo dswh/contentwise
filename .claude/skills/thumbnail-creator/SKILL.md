@@ -38,43 +38,52 @@ If the article doesn't focus on a specific product, skip the logo entirely — n
 
 ## The Rotating Color Palette
 
-Every thumbnail uses a dark atmospheric base, but the accent color shifts to prevent visual monotony. Pick the palette that matches the article's emotional tone — not just the topic.
+Thumbnails use **high-contrast, saturated color pops** against bold backgrounds (black, white, or a dominant color). Each palette pairs 2-3 punchy colors. Rotate across issues for variety.
 
-| Palette | Base | Accent | Glow | Best For | Emotional Tone |
-|---------|------|--------|------|----------|----------------|
-| **Teal Depths** | #091717 | #20808D | Turquoise aurora | Speed, search, discovery, exploration | Curiosity, possibility |
-| **Amber Signal** | #0D0D0D | #F5A623 | Warm golden haze | Announcements, launches, power, authority | Confidence, warmth |
-| **Coral Tension** | #1A0A0A | #FF6B6B | Red-pink atmospheric glow | Critiques, audits, comparisons, skepticism | Tension, honest assessment |
-| **Violet Dream** | #0D0A1A | #A78BFA | Soft purple nebula | Vision pieces, future thinking, big ideas | Wonder, imagination |
-| **Emerald Growth** | #0A1A0D | #34D399 | Green bioluminescence | Open source, community, building, growth | Organic energy, empowerment |
-| **White Light** | #0D0D0D | #F0F0F0 | Cool white radiance | Technical deep-dives, architecture, precision | Clarity, sharp focus |
+| Palette | Primary Pop | Secondary | Background | Best For | Vibe |
+|---------|------------|-----------|------------|----------|------|
+| **Electric Teal** | Turquoise (#00CED1) | Mustard yellow (#E8A317) | Black or off-white | Speed, discovery, exploration | Fresh, energetic |
+| **Fire & Gold** | Electric red (#FF2D2D) | Mustard (#F5A623) | Deep black | Launches, power, competition, comebacks | Bold, confident |
+| **Grape Soda** | Deep purple (#7C3AED) | Mint green (#6EE7B7) | White or cream | Vision pieces, future thinking, big ideas | Playful, imaginative |
+| **Coral Punch** | Coral (#FF6B6B) | Teal (#20808D) | Off-white (#FAFAF5) | Critiques, audits, honest takes | Sharp, editorial |
+| **Neon Garden** | Mint green (#34D399) | Electric pink (#FF69B4) | Black | Open source, building, community | Alive, organic |
+| **Monochrome Pop** | One saturated pop color | Black | White | Technical deep-dives, precision, architecture | Clean, striking |
 
-**Rotation rule:** Check the last 3 thumbnails generated (if the user mentions them or you have context). Avoid using the same palette twice in a row. If no context, pick based on emotional tone.
+**Rotation rule:** Never repeat the same palette two issues in a row. Alternate warm and cool dominants.
 
-**Blending:** You can blend two palettes — e.g., Amber Signal base with a hint of Teal Depths in the atmosphere. This creates richer, more unique compositions.
+**The key:** Colors should POP. These thumbnails should look punchy at phone size in a crowded feed — not subtle, not muted, not dark-and-moody. Think magazine cover, not art gallery.
 
 ---
 
-## The Visual System (Perplexity-Inspired)
+## The Visual System: Collage Surrealism
 
-Every thumbnail shares these DNA traits. Read `references/templates.md` for the exact prompt templates.
+The aesthetic is **high-contrast collage surrealism** — mixing photography, classical engravings/sculpture, and bold vector shapes to create an "idea" rather than a literal image. Read `references/templates.md` for exact prompt templates.
 
 ### Core Aesthetic
 
-1. **Dark atmospheric base** — always starts from darkness. Deep blacks, teal-blacks, or near-black with color. Never white or light backgrounds.
-2. **Atmospheric depth** — haze, mist, aurora-like light streaks, particle effects. The image should feel like it has physical depth — foreground, midground, background layers.
-3. **3D glass/crystal objects** — translucent spheres, hexagons, prisms, cubes that catch and refract light. These are the "hero objects" — they float, they glow, they feel tactile.
-4. **Nature meets digital** — lush organic elements (moss, ferns, coral, clouds, water, rock formations) growing alongside or merging with digital wireframes, particle grids, light trails.
-5. **Cinematic lighting** — always dramatic. Side-lit, rim-lit, backlit. Strong contrast. Light sources should feel motivated — a glow from within an object, light streaking from the horizon, bioluminescence.
-6. **Subtle grain and texture** — slight film grain, chromatic aberration at edges, lens flare where light sources peak. Analog warmth in a digital composition.
+1. **Collage + mixed media.** Combine real photography with classical engravings, halftone textures, bold geometric shapes, and hand-drawn elements in the same frame. The clash of styles IS the style.
+2. **High contrast, saturated pops.** Colors should be bold and unapologetic — teal, electric red, mustard yellow, purple, mint green. Pair them with black or white for maximum punch. No muddy midtones.
+3. **Classical sculpture + modern props.** Greek/Roman statues wearing headphones, holding smartphones, interacting with floating UI elements. The collision of ancient and digital is the signature move.
+4. **Visual metaphor > literal.** Never show the actual thing. Show what the thing FEELS like. "AI agent" → puppet master strings. "Planning" → chess pieces on a calendar. "Speed" → a cheetah skeleton in a wind tunnel. "Hype audit" → a golden mask being peeled off.
+5. **Bold shapes and framing.** Large geometric blocks of color, cut-out silhouettes, oversized objects that break the frame. Think poster design, not photography.
+6. **Texture layers.** Halftone dot patterns, paper grain, risograph printing effects, newsprint textures. These add editorial warmth and prevent the "AI-generated" look.
+
+### What This IS
+
+- Collage zine meets editorial magazine
+- Classical art remixed with tech concepts
+- Surrealist visual metaphors that make you laugh or go "wait, what?"
+- Bold, fun, slightly irreverent
+- The kind of image someone would put on a sticker
 
 ### What This Is NOT
 
-- Not flat design or UI mockups
-- Not bright/white corporate tech aesthetics
-- Not photorealistic people or faces
-- Not literal screenshots or product demos
-- Not generic "AI brain" or "glowing circuit" imagery
+- Dark moody atmospheric landscapes
+- Flat corporate design or UI mockups
+- Photorealistic people or faces
+- Literal screenshots or product demos
+- Generic "AI brain" or "glowing circuit" imagery
+- Subtle or muted — if it doesn't pop at thumbnail size, it fails
 
 ---
 
@@ -91,9 +100,11 @@ The thumbnail's job is to stop the scroll. Your concept needs to make someone's 
 3. **Render it in the Perplexity aesthetic** — take that physical concept and place it in a dark atmospheric landscape with glass objects, light trails, and nature-digital fusion.
 
 **Concept quality test:**
+- **Visual hook:** The image needs ONE element that grabs the eye and won't let go — a cracked golden egg, a statue wearing airpods, a giant kitchen timer with app icons for numbers. If you can't point to the single "wait, what?" element, the concept isn't done yet.
 - Would someone screenshot this and send it to a friend without context? If not, push weirder.
 - Is the concept from a domain unrelated to tech? Good — cross-domain collisions are what stop scrolling.
 - Does it capture the article's FEELING, not just its TOPIC? A piece about "fast but not frontier" should feel like speed-with-limits, not like "AI model."
+- Is it FUN? These thumbnails should make people smile or do a double-take — not nod respectfully. Irreverence > elegance.
 
 ---
 
