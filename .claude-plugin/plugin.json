@@ -1,0 +1,17 @@
+{
+  "name": "contentwise",
+  "version": "1.0.0",
+  "description": "9-skill newsletter pipeline: idea validation, hook scoring, pillar matching, virality scoring, newsletter writing, visual planning, draft review, content aggregation, and thumbnail generation.",
+  "author": {
+    "name": "Harshit"
+  },
+  "homepage": "https://github.com/harshit/contentwise",
+  "license": "MIT",
+  "keywords": [
+    "newsletter",
+    "content-pipeline",
+    "ai-products",
+    "virality",
+    "content-strategy"
+  ]
+}

@@ -320,3 +320,15 @@ Team member pastes screenshot/link
 - **The fast filter is strict on purpose.** It is easier to loosen later than to recover from investing in a bad idea. When in doubt, lean toward FAIL with a CONDITIONAL note rather than a soft PASS.
 - **You are serving builders.** Every evaluation should be through the lens of: "Would our audience of builders, developers, founders, and AI-curious professionals find this worth their time?" Not every cool AI product is right for us.
 - **This feeds the Hook Scorer.** If you recommend PROCEED, the next step is full 8-dimension scoring. Your Idea Profile card should contain enough context for the Hook Scorer to do its job without re-researching everything.
+
+## Pipeline Context
+This skill is part of the contentwise plugin pipeline:
+1. `/contentwise:content-aggregator` — Research what competitors are posting
+2. `/contentwise:idea-validator` — Validate a trending idea
+3. `/contentwise:hook-scorer` — Score the idea (0-62.5)
+4. `/contentwise:pillar-matcher` — Pick content pillar + titles
+5. `/contentwise:virality-scorer` — Score the packaging (0-57.5)
+6. `/contentwise:newsletter-writer` — Write the 10-section draft
+7. `/contentwise:visual-asset-planner` — Generate shot list
+8. `/contentwise:newsletter-reviewer` — Final quality gate
+9. `/contentwise:thumbnail-creator` — Generate hero thumbnail

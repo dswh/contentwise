@@ -248,3 +248,15 @@ Every description and spec should be concrete enough that someone who has never 
 6. **Validate** coverage: all 8 must-haves present, all sections covered, all three purposes represented.
 7. **Reject** any visual that fails the three-job test or matches an anti-pattern.
 8. **Output** the final structured plan with the coverage checks at the end.
+
+## Pipeline Context
+This skill is part of the contentwise plugin pipeline:
+1. `/contentwise:content-aggregator` — Research what competitors are posting
+2. `/contentwise:idea-validator` — Validate a trending idea
+3. `/contentwise:hook-scorer` — Score the idea (0-62.5)
+4. `/contentwise:pillar-matcher` — Pick content pillar + titles
+5. `/contentwise:virality-scorer` — Score the packaging (0-57.5)
+6. `/contentwise:newsletter-writer` — Write the 10-section draft
+7. `/contentwise:visual-asset-planner` — Generate shot list
+8. `/contentwise:newsletter-reviewer` — Final quality gate
+9. `/contentwise:thumbnail-creator` — Generate hero thumbnail

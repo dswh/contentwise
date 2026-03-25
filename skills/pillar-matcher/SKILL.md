@@ -314,3 +314,15 @@ Suggest this when:
 - **Idea does not fit any pillar cleanly:** Default to Viral Rebuild (the most flexible pillar) and note which elements are weak. Suggest reframing the angle.
 - **User wants a specific pillar:** Honor their preference. Generate titles for that pillar. But if the fit is poor, flag it: "This can work as a [requested pillar], but [other pillar] is a stronger natural fit because [reason]. Here are titles for both."
 - **Idea is not about a specific product:** If it is about a trend, technique, or pattern, route to Lessons From the Build. If it is about a category of products, suggest picking one specific product to anchor it and then apply pillar matching.
+
+## Pipeline Context
+This skill is part of the contentwise plugin pipeline:
+1. `/contentwise:content-aggregator` — Research what competitors are posting
+2. `/contentwise:idea-validator` — Validate a trending idea
+3. `/contentwise:hook-scorer` — Score the idea (0-62.5)
+4. `/contentwise:pillar-matcher` — Pick content pillar + titles
+5. `/contentwise:virality-scorer` — Score the packaging (0-57.5)
+6. `/contentwise:newsletter-writer` — Write the 10-section draft
+7. `/contentwise:visual-asset-planner` — Generate shot list
+8. `/contentwise:newsletter-reviewer` — Final quality gate
+9. `/contentwise:thumbnail-creator` — Generate hero thumbnail

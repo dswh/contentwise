@@ -243,3 +243,15 @@ Output the full newsletter draft as a single markdown document with clear sectio
 
 [continue all 10 sections]
 ```
+
+## Pipeline Context
+This skill is part of the contentwise plugin pipeline:
+1. `/contentwise:content-aggregator` — Research what competitors are posting
+2. `/contentwise:idea-validator` — Validate a trending idea
+3. `/contentwise:hook-scorer` — Score the idea (0-62.5)
+4. `/contentwise:pillar-matcher` — Pick content pillar + titles
+5. `/contentwise:virality-scorer` — Score the packaging (0-57.5)
+6. `/contentwise:newsletter-writer` — Write the 10-section draft
+7. `/contentwise:visual-asset-planner` — Generate shot list
+8. `/contentwise:newsletter-reviewer` — Final quality gate
+9. `/contentwise:thumbnail-creator` — Generate hero thumbnail

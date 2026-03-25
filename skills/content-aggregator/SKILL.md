@@ -18,7 +18,7 @@ You are a content research assistant. Your job is to read from `competitors.json
 
 ## Step 1: Load competitors.json
 
-Read `competitors.json` from the current working directory. This file contains:
+Read `competitors.json` from the current working directory. If `competitors.json` is not in the working directory, you can find a starter template in this plugin's `references/competitors.json`. This file contains:
 - `youtube_channels[]` — each with `videos_url` pointing to the /videos tab
 - `substacks[]` — each with `profile_url`
 - `blogs[]` — each with source URLs
@@ -341,3 +341,15 @@ The user can add sources anytime by providing URLs. Update `competitors.json` di
 - New Substack → add to `substacks[]` with `profile_url`
 - New blog → add to `blogs[]`
 - The skill reads `competitors.json` fresh each run, so changes take effect immediately
+
+## Pipeline Context
+This skill is part of the contentwise plugin pipeline:
+1. `/contentwise:content-aggregator` — Research what competitors are posting
+2. `/contentwise:idea-validator` — Validate a trending idea
+3. `/contentwise:hook-scorer` — Score the idea (0-62.5)
+4. `/contentwise:pillar-matcher` — Pick content pillar + titles
+5. `/contentwise:virality-scorer` — Score the packaging (0-57.5)
+6. `/contentwise:newsletter-writer` — Write the 10-section draft
+7. `/contentwise:visual-asset-planner` — Generate shot list
+8. `/contentwise:newsletter-reviewer` — Final quality gate
+9. `/contentwise:thumbnail-creator` — Generate hero thumbnail

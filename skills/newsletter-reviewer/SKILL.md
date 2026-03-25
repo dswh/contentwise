@@ -210,3 +210,15 @@ To run a complete review, you need:
 If the visual asset plan is missing, flag it and review the draft's inline `[VISUAL: ...]` callouts against the 8 must-have list instead.
 
 If the hook/virality score reports are available, check that the draft actually delivers on the strengths those scores identified. A high hook score for "Reveal Potential" means the draft better have a genuine reveal.
+
+## Pipeline Context
+This skill is part of the contentwise plugin pipeline:
+1. `/contentwise:content-aggregator` — Research what competitors are posting
+2. `/contentwise:idea-validator` — Validate a trending idea
+3. `/contentwise:hook-scorer` — Score the idea (0-62.5)
+4. `/contentwise:pillar-matcher` — Pick content pillar + titles
+5. `/contentwise:virality-scorer` — Score the packaging (0-57.5)
+6. `/contentwise:newsletter-writer` — Write the 10-section draft
+7. `/contentwise:visual-asset-planner` — Generate shot list
+8. `/contentwise:newsletter-reviewer` — Final quality gate
+9. `/contentwise:thumbnail-creator` — Generate hero thumbnail

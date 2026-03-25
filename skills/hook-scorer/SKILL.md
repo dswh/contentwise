@@ -311,3 +311,15 @@ This is a rare high-signal idea. Massive attention, deeply teachable rebuild, an
 - **Weighted formula must be exact.** Double-check your arithmetic. The weights are not equal — Attention, Rebuildability, and Teachability matter most (weight 2 each). Do not round intermediate values.
 - **This is a content decision, not a product review.** A brilliant product can score low (too complex to rebuild, wrong audience). A simple hack can score high (easy to rebuild, great reveal, perfect audience fit). You're scoring content potential, not product quality.
 - **The moat is analyst + builder, not copier.** Every scored idea should have the potential to answer: Why did this spread? How does it probably work? Can we rebuild the core? What should builders learn? If it cannot answer all four, it will score low across multiple dimensions.
+
+## Pipeline Context
+This skill is part of the contentwise plugin pipeline:
+1. `/contentwise:content-aggregator` — Research what competitors are posting
+2. `/contentwise:idea-validator` — Validate a trending idea
+3. `/contentwise:hook-scorer` — Score the idea (0-62.5)
+4. `/contentwise:pillar-matcher` — Pick content pillar + titles
+5. `/contentwise:virality-scorer` — Score the packaging (0-57.5)
+6. `/contentwise:newsletter-writer` — Write the 10-section draft
+7. `/contentwise:visual-asset-planner` — Generate shot list
+8. `/contentwise:newsletter-reviewer` — Final quality gate
+9. `/contentwise:thumbnail-creator` — Generate hero thumbnail

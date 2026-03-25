@@ -1,8 +1,69 @@
 # ContentWise
 
-**7 Claude Code skills that take your team from "I saw something trending" to "published newsletter" — with scoring, brand alignment, and quality gates at every step.**
+**A Claude Code plugin with 9 skills that take your team from "I saw something trending" to "published newsletter" — with scoring, brand alignment, and quality gates at every step.**
 
 Brand: *We reverse engineer trending AI products and rebuild what actually matters.*
+
+---
+
+## Installation
+
+### Option A: Direct Install (Simplest)
+
+In Claude Code, run:
+
+```
+/plugin install github:harshit/contentwise
+```
+
+All 9 skills become available immediately.
+
+### Option B: Custom Team Marketplace
+
+Create a separate marketplace repo with `.claude-plugin/marketplace.json`:
+
+```json
+{
+  "name": "content-team-marketplace",
+  "description": "Content team's Claude Code plugins",
+  "owner": { "name": "Content Team" },
+  "plugins": [
+    {
+      "name": "contentwise",
+      "description": "9-skill newsletter pipeline",
+      "source": {
+        "source": "github",
+        "repo": "harshit/contentwise"
+      }
+    }
+  ]
+}
+```
+
+Team members add the marketplace to `~/.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "content-team-marketplace": {
+      "source": { "source": "github", "repo": "harshit/content-team-marketplace" }
+    }
+  }
+}
+```
+
+Then install: `/plugin install contentwise@content-team-marketplace`
+
+### Option C: Official Claude Code Marketplace
+
+1. Push the plugin repo to a public GitHub repo
+2. Submit at **https://clau.de/plugin-directory-submission**
+3. After acceptance, anyone can install via `/plugin install contentwise`
+
+### Prerequisites
+
+- **Thumbnail generation**: The `/contentwise:thumbnail-creator` skill requires the [nanobanana MCP server](https://github.com/nanobanana) configured in your Claude Code setup.
+- **Content aggregation**: The `/contentwise:content-aggregator` skill reads `competitors.json` from your working directory. A starter template is included in `references/competitors.json` — copy it to your project to get started.
 
 ---
 
@@ -10,21 +71,25 @@ Brand: *We reverse engineer trending AI products and rebuild what actually matte
 
 ```
 Screenshot / Link
-       ↓
-  /idea-validator       →  Is this worth pursuing?
-       ↓
-  /hook-scorer          →  How strong is the idea? (score /62.5)
-       ↓
-  /pillar-matcher       →  What format + title?
-       ↓
-  /virality-scorer      →  Will the packaging spread? (score /57.5)
-       ↓
-  /newsletter-writer    →  Full 10-section draft
-       ↓
-  /visual-asset-planner →  Shot list for every image
-       ↓
-  /newsletter-reviewer  →  PASS or REVISE with feedback
+       |
+  /contentwise:idea-validator       ->  Is this worth pursuing?
+       |
+  /contentwise:hook-scorer          ->  How strong is the idea? (score /62.5)
+       |
+  /contentwise:pillar-matcher       ->  What format + title?
+       |
+  /contentwise:virality-scorer      ->  Will the packaging spread? (score /57.5)
+       |
+  /contentwise:newsletter-writer    ->  Full 10-section draft
+       |
+  /contentwise:visual-asset-planner ->  Shot list for every image
+       |
+  /contentwise:newsletter-reviewer  ->  PASS or REVISE with feedback
 ```
+
+**Bonus skills:**
+- `/contentwise:content-aggregator` — Research what competitors are posting across YouTube, Substack, blogs, and X
+- `/contentwise:thumbnail-creator` — Generate a 16:9 hero thumbnail for the issue
 
 ---
 
@@ -32,64 +97,118 @@ Screenshot / Link
 
 ### Step 1: Validate an Idea
 
-Someone on your team spots a trending AI product. They paste a screenshot or link:
+Paste a screenshot or link of a trending AI product:
 
 ```
-/idea-validator
+/contentwise:idea-validator
 
 [paste screenshot of Product Hunt launch / GitHub trending repo / viral X post]
 ```
 
-**What to provide:** A screenshot, URL, or just a name + description.
-
-**What you get back:** An Idea Profile card with:
-- Product name, source, signal snapshot
-- Fast filter results (3 yes/no questions)
-- Recommendation: PROCEED / SKIP / CONDITIONAL
-
----
+**Output:** Idea Profile card with PROCEED / SKIP / CONDITIONAL recommendation.
 
 ### Step 2: Score the Hook
 
-If the idea passes validation, run the full 8-dimension scoring:
+Run the full 8-dimension scoring:
 
 ```
-/hook-scorer
+/contentwise:hook-scorer
 
 Score this: [product name + URL]
-It's a [brief description]. Currently [signal data — stars, upvotes, etc.]
+It's a [brief description]. Currently [signal data - stars, upvotes, etc.]
 ```
 
-**What to provide:** Idea name, URL, description, and signal data. Or paste the Idea Profile from Step 1.
-
-**What you get back:**
-- Fast filter gate (pass/fail)
-- 8 dimensions scored 1-5 with reasoning
-- Weighted total out of 62.5
-- Verdict: MUST COVER (50+) / STRONG (42-49) / TIMING DEPENDENT (34-41) / REJECT (<34)
-
----
+**Output:** 8 dimensions scored, weighted total /62.5, verdict: MUST COVER (50+) / STRONG (42-49) / TIMING DEPENDENT (34-41) / REJECT (<34).
 
 ### Step 3: Pick a Pillar + Title
 
-Choose the best content format and generate title options:
-
 ```
-/pillar-matcher
+/contentwise:pillar-matcher
 
-[paste hook score report or describe the idea]
+[paste hook score report]
 Previous issues used: 3 Viral Rebuilds, 1 Hype Audit, 1 Feature Extraction
 ```
 
-**What to provide:** Idea + hook score report. Optionally, your recent issue pillar history for mix tracking.
+**Output:** Primary pillar + 3-5 title options + pillar mix status.
 
-**What you get back:**
-- Primary pillar recommendation with reasoning
-- Secondary pillar as backup
-- 3-5 title options (top pick marked)
-- Pillar mix status (warns if a format is overused)
+### Step 4: Score the Packaging
 
-**The 7 pillars:**
+```
+/contentwise:virality-scorer
+
+Idea: [name]
+Pillar: [chosen pillar]
+Title: [proposed title]
+Angle: [1-3 sentences]
+Hook score: [number from step 2]
+```
+
+**Output:** 8 packaging dimensions scored, total /57.5. If hook is high but virality is low: automatic repackaging suggestions.
+
+### Step 5: Write the Newsletter
+
+```
+/contentwise:newsletter-writer
+
+Idea: [name + URL]
+Hook score: 48.5
+Pillar: Viral Rebuild
+Title: "We Rebuilt Today's #1 Product Hunt Launch"
+Virality score: 42
+
+Build notes:
+- Started with [approach], hit [problem]
+- Pivoted to [new approach]
+- [What finally worked]
+- Key surprise: [what was unexpected]
+
+Lessons:
+- [Takeaway 1]
+- [Takeaway 2]
+```
+
+**Output:** Complete 10-section newsletter draft with `[VISUAL: ...]` callouts.
+
+### Step 6: Plan the Visuals
+
+```
+/contentwise:visual-asset-planner
+
+[paste the newsletter draft]
+```
+
+**Output:** Per-section visual checklist with 8 must-have visuals + nice-to-haves.
+
+### Step 7: Final Review
+
+```
+/contentwise:newsletter-reviewer
+
+[paste the newsletter draft]
+[paste the visual asset plan]
+```
+
+**Output:** PASS or REVISE with section-by-section feedback.
+
+---
+
+## Skill Reference
+
+| Skill | Trigger Phrases | Input | Output |
+|-------|----------------|-------|--------|
+| `/contentwise:idea-validator` | "validate this", "is this worth covering" | Screenshot, URL, or description | Idea Profile + PROCEED/SKIP |
+| `/contentwise:hook-scorer` | "score this hook", "rate this idea" | Idea + signal data | Score /62.5 + verdict |
+| `/contentwise:pillar-matcher` | "which pillar", "suggest titles" | Scored idea + optional history | Pillar + 3-5 titles |
+| `/contentwise:virality-scorer` | "score virality", "check packaging" | Idea + pillar + title + angle | Score /57.5 + repackaging |
+| `/contentwise:newsletter-writer` | "write the newsletter", "draft the issue" | All scores + build notes | Full 10-section draft |
+| `/contentwise:visual-asset-planner` | "plan visuals", "shot list" | Newsletter draft | Visual checklist |
+| `/contentwise:newsletter-reviewer` | "review the newsletter", "final review" | Draft + visual plan | PASS/REVISE + feedback |
+| `/contentwise:content-aggregator` | "aggregate content", "content research" | competitors.json in project | Content blueprint doc |
+| `/contentwise:thumbnail-creator` | "create thumbnail", "newsletter thumbnail" | Newsletter topic/draft | 16:9 hero image |
+
+---
+
+## The 7 Content Pillars
 
 | Pillar | Core Question | Frequency |
 |--------|---------------|-----------|
@@ -103,136 +222,6 @@ Previous issues used: 3 Viral Rebuilds, 1 Hype Audit, 1 Feature Extraction
 
 ---
 
-### Step 4: Score the Packaging
-
-Check if the title and angle will actually spread:
-
-```
-/virality-scorer
-
-Idea: [name]
-Pillar: [chosen pillar]
-Title: [proposed title]
-Angle: [1-3 sentences on how you'll frame it]
-Hook score: [number from step 2]
-```
-
-**What to provide:** Idea + pillar + proposed title + angle + hook score.
-
-**What you get back:**
-- 8 packaging dimensions scored with reasoning
-- Weighted total out of 57.5
-- Verdict: HIGH VIRAL (46+) / STRONG (38-45) / IMPROVE PACKAGING (30-37) / WEAK (<30)
-- If hook is high but virality is low: automatic repackaging suggestions with rewritten titles
-
----
-
-### Step 5: Write the Newsletter
-
-Once scoring is complete, provide your build notes and let the skill write the full issue:
-
-```
-/newsletter-writer
-
-Idea: [name + URL]
-Hook score: 48.5 — STRONG CANDIDATE
-Pillar: Viral Rebuild
-Title: "We Rebuilt Today's #1 Product Hunt Launch"
-Virality score: 42 — STRONG
-
-Build notes:
-- Started with [approach], hit [problem] at [time]
-- Pivoted to [new approach] because [reason]
-- [What finally worked]
-- Total time: [X minutes]
-- Key surprise: [what was harder/easier than expected]
-
-Lessons:
-- [Rough takeaway 1]
-- [Rough takeaway 2]
-- [Rough takeaway 3]
-```
-
-**What to provide:** All prior skill outputs + raw build notes (the messier and more honest, the better) + rough lessons.
-
-**What you get back:** Complete 10-section newsletter draft:
-1. Subject line (mission-driven)
-2. Opening hook (3-5 lines)
-3. The Object (profile card)
-4. Why It Worked (3 subsections)
-5. The Rebuild Brief (goal, constraints, stack, success criteria)
-6. How We Think It Works (reverse-engineered architecture)
-7. The Build Log (attempts, failures, pivots — alive, not polished)
-8. Final Comparison (original vs rebuilt)
-9. The Real Lesson (3-5 transferable insights)
-10. Build Takeaway (reusable asset)
-11. Next Week's Tease (open loop)
-
-All sections include `[VISUAL: ...]` callouts for the visual planner.
-
----
-
-### Step 6: Plan the Visuals
-
-Generate a complete shot list from the draft:
-
-```
-/visual-asset-planner
-
-[paste the newsletter draft from step 5]
-```
-
-**What to provide:** The complete newsletter draft. Optionally, describe what screenshots/artifacts you already captured during the build.
-
-**What you get back:** Per-section visual checklist with:
-- 8 must-have visuals (hero screenshot, signal card, annotated teardown, build brief card, architecture diagram, iteration gallery, side-by-side comparison, lessons card)
-- Nice-to-have visuals where the content warrants them
-- Each asset tagged: type, description, priority, purpose (PROVE / EXPLAIN / COMPARE), specs, source
-
----
-
-### Step 7: Final Review
-
-Run the quality gate before publishing:
-
-```
-/newsletter-reviewer
-
-[paste the newsletter draft]
-[paste the visual asset plan]
-```
-
-**What to provide:** The newsletter draft + visual plan. Optionally, the hook and virality score reports.
-
-**What you get back:**
-- **Verdict: PASS or REVISE**
-- Template completeness (10+1 sections checked)
-- Core content test (5 checks: strong hook, clear challenge, visible progress, satisfying comparison, transferable lesson)
-- Brand voice check (field report, not blog post)
-- Visual system check (all 8 must-haves present)
-- Strengths to protect
-- Section-by-section feedback (only for sections that need changes)
-- Revision priorities ordered by impact
-
-If REVISE: fix the flagged issues and run the reviewer again.
-If PASS: publish.
-
----
-
-## Skill Reference
-
-| Skill | Trigger Phrases | Input | Output |
-|-------|----------------|-------|--------|
-| `/idea-validator` | "validate this", "is this worth covering", "check this out" | Screenshot, URL, or description | Idea Profile card + PROCEED/SKIP |
-| `/hook-scorer` | "score this hook", "rate this idea", "hook score" | Idea + signal data | 8-dim score /62.5 + verdict |
-| `/pillar-matcher` | "which pillar", "suggest titles", "what format" | Scored idea + optional history | Pillar + 3-5 titles + mix status |
-| `/virality-scorer` | "score virality", "will this spread", "check packaging" | Idea + pillar + title + angle | 8-dim score /57.5 + repackaging |
-| `/newsletter-writer` | "write the newsletter", "draft the issue" | All scores + build notes + lessons | Full 10-section draft |
-| `/visual-asset-planner` | "plan visuals", "shot list", "what images" | Newsletter draft | Per-section visual checklist |
-| `/newsletter-reviewer` | "review the newsletter", "is this ready", "final review" | Draft + visual plan | PASS/REVISE + feedback |
-
----
-
 ## Brand Guidelines (Built Into Every Skill)
 
 - **Tagline:** We reverse engineer trending AI products and rebuild what actually matters.
@@ -243,11 +232,13 @@ If PASS: publish.
 
 ---
 
-## Project Structure
+## Plugin Structure
 
 ```
 contentwise/
-├── .claude/skills/
+├── .claude-plugin/
+│   └── plugin.json
+├── skills/
 │   ├── idea-validator/SKILL.md
 │   ├── hook-scorer/SKILL.md
 │   ├── pillar-matcher/SKILL.md
@@ -256,12 +247,20 @@ contentwise/
 │   │   ├── SKILL.md
 │   │   └── references/section-templates.md
 │   ├── visual-asset-planner/SKILL.md
-│   └── newsletter-reviewer/
+│   ├── newsletter-reviewer/
+│   │   ├── SKILL.md
+│   │   └── references/review-checklist.md
+│   ├── content-aggregator/SKILL.md
+│   └── thumbnail-creator/
 │       ├── SKILL.md
-│       └── references/review-checklist.md
-├── prd.json              # Full PRD with all skill specs
-├── strategy.md           # Content strategy reference
-├── newsletter_branding   # Complete branding guidelines
-├── competitors.json      # Tracked content sources
-└── content-sources.yaml  # Monitored channels
+│       └── references/templates.md
+├── references/
+│   ├── strategy.md
+│   ├── prd.json
+│   ├── content-sources.yaml
+│   ├── competitors.json
+│   └── newsletter_branding
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
