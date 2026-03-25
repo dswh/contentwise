@@ -81,7 +81,7 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 **Use for:** AI + human collaboration, tool reviews, "AI is/isn't replacing X," human judgment pieces.
 
 ```
-16:9 thumbnail. A classical Greek/Roman marble statue bust or figure, [STATUE_POSE], recolored in bold [PALETTE_PRIMARY] and [PALETTE_SECONDARY] duotone. The statue is wearing [MODERN_PROP] and interacting with [METAPHOR_OBJECT]. Background: large flat [PALETTE_BG] color block with [GEOMETRIC_SHAPE] in contrasting color behind the statue. Halftone dot texture overlay at 30% opacity. Bold cut-out style — the statue feels like a magazine clipping pasted onto the background. Risograph printing effect on edges. Composition: statue fills 60% of frame, off-center. Vibe: [MOOD] — irreverent, editorial, like a zine cover. No text.
+16:9 thumbnail. A classical Indian stone sculpture or figure (Chola bronze, Khajuraho sandstone, Gandhara style, or Mughal miniature style), [STATUE_POSE], recolored in bold [PALETTE_PRIMARY] and [PALETTE_SECONDARY] duotone. The statue is wearing [MODERN_PROP] and interacting with [METAPHOR_OBJECT]. Background: large flat [PALETTE_BG] color block with [GEOMETRIC_SHAPE] in contrasting color behind the statue. Halftone dot texture overlay at 30% opacity. Bold cut-out style — the statue feels like a magazine clipping pasted onto the background. Risograph printing effect on edges. Composition: statue fills 60% of frame, off-center. Vibe: [MOOD] — irreverent, editorial, like a zine cover. No text.
 ```
 
 **Placeholders:**
@@ -157,7 +157,7 @@ Style: high-contrast collage surrealism. Mix photography, classical engraving, a
 - Emotional core: The comeback kid. They were down and now they're swinging.
 - Palette: **Fire & Gold** (comeback energy, bold confidence)
 - Template: **Statue Remix**
-- Concept: A classical Greek boxer statue, muscles tensed, recolored in electric red and gold duotone, wearing modern boxing gloves. One glove is raised in victory. Behind: a massive gold circle like a rising sun. Halftone texture. The statue has a fresh black eye but is grinning.
+- Concept: A Chola bronze Nataraja (dancing Shiva) figure, recolored in electric red and gold duotone, but instead of the ring of fire, a ring of glowing code symbols. One hand holds a modern game controller instead of the drum. Behind: a massive gold circle like a rising sun. Halftone texture. The cosmic dance of destruction and creation — the comeback.
 
 **Article:** "We rebuilt today's #1 Product Hunt launch"
 - Emotional core: Cracking something open to see how it works

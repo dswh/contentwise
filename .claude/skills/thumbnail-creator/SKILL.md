@@ -63,7 +63,7 @@ The aesthetic is **high-contrast collage surrealism** — mixing photography, cl
 
 1. **Collage + mixed media.** Combine real photography with classical engravings, halftone textures, bold geometric shapes, and hand-drawn elements in the same frame. The clash of styles IS the style.
 2. **High contrast, saturated pops.** Colors should be bold and unapologetic — teal, electric red, mustard yellow, purple, mint green. Pair them with black or white for maximum punch. No muddy midtones.
-3. **Classical sculpture + modern props.** Greek/Roman statues wearing headphones, holding smartphones, interacting with floating UI elements. The collision of ancient and digital is the signature move.
+3. **Indian classical sculpture + modern props.** Indian classical sculptures (Chola bronzes, Khajuraho sandstone, Gandhara style) wearing headphones, holding smartphones, interacting with floating UI elements. The collision of ancient and digital is the signature move.
 4. **Visual metaphor > literal.** Never show the actual thing. Show what the thing FEELS like. "AI agent" → puppet master strings. "Planning" → chess pieces on a calendar. "Speed" → a cheetah skeleton in a wind tunnel. "Hype audit" → a golden mask being peeled off.
 5. **Bold shapes and framing.** Large geometric blocks of color, cut-out silhouettes, oversized objects that break the frame. Think poster design, not photography.
 6. **Texture layers.** Halftone dot patterns, paper grain, risograph printing effects, newsprint textures. These add editorial warmth and prevent the "AI-generated" look.
